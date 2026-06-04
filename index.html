@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brazil Mission Trip 2027 — Augusta University to Quixadá</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --usa-navy: #002868;
+  --usa-red: #BF0A30;
+  --usa-white: #FFFFFF;
+  --brazil-green: #009C3B;
+  --brazil-yellow: #FFDF00;
+  --brazil-blue: #002776;
+  --primary-dark: #001a42;
+  --primary: #002868;
+  --primary-mid: #0a4a7a;
+  --primary-light: #336685;
+  --primary-pale: #5c8da8;
+  --green: #009C3B;
+  --green-dark: #007a2e;
+  --green-light: #2db854;
+  --green-pale: #d4f0dd;
+  --yellow: #FFDF00;
+  --yellow-dark: #d4b800;
+  --yellow-pale: #fff8cc;
+  --red: #BF0A30;
+  --red-light: #d43a5c;
+  --silver: #A5ACAF;
+  --silver-light: #c5cacc;
+  --silver-pale: #d0d5d8;
+  --silver-bg: #f0f2f3;
+  --page-bg: #EEEEEE;
+  --card-bg: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-body: #3a3a4a;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;background:var(--page-bg);color:var(--text-body);line-height:1.65;font-weight:400;font-size:15px}
+
+/* ═══════ HERO ═══════ */
+.hero{position:relative;background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 40%,var(--primary-mid) 100%);color:#fff;padding:72px 30px 62px;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-100px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(0,156,59,.08) 0%,transparent 70%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,223,0,.06) 0%,transparent 70%);pointer-events:none}
+.hero-stripe{position:absolute;bottom:0;left:0;width:100%;height:4px;display:flex}
+.hero-stripe span{flex:1;transform:scaleX(0);transform-origin:left;animation:stripeIn .9s cubic-bezier(.22,1,.36,1) forwards}
+.hero-stripe .s1{background:var(--usa-red)}
+.hero-stripe .s2{background:var(--usa-navy);animation-delay:.12s}
+.hero-stripe .s3{background:var(--brazil-green);animation-delay:.24s}
+.hero-stripe .s4{background:var(--brazil-yellow);animation-delay:.36s}
+@keyframes stripeIn{to{transform:scaleX(1)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.hero-inner{max-width:1080px;margin:0 auto;position:relative;z-index:1}
+.hero-flags{display:flex;gap:10px;align-items:center;margin-bottom:20px}
+.flag-pill{font-family:Montserrat,sans-serif;font-weight:800;font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:3px;display:inline-flex;align-items:center;gap:6px}
+.flag-pill.usa{background:var(--usa-red);color:#fff}
+.flag-pill.brazil{background:var(--brazil-green);color:#fff}
+.flag-emoji{font-size:14px;letter-spacing:0}
+.hero-arrow{color:var(--silver-light);font-family:Montserrat;font-size:13px;font-weight:600}
+.hero h1{font-family:Montserrat,sans-serif;font-weight:700;font-size:clamp(26px,4vw,40px);letter-spacing:-.5px;line-height:1.12;margin-bottom:10px}
+.hero h1 .g{color:var(--green-light)}.hero h1 .y{color:var(--yellow)}
+.hero-sub{font-family:'Source Sans 3',sans-serif;font-weight:300;font-size:17px;color:rgba(255,255,255,.72);max-width:720px;margin-bottom:30px;line-height:1.6}
+.hero-stats{display:flex;gap:36px;flex-wrap:wrap}
+.hero-stat-n{font-family:Montserrat;font-weight:800;font-size:40px;line-height:1;color:var(--yellow)}
+.hero-stat-l{font-family:Montserrat;font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.55);margin-top:4px}
+.planning-badge{display:inline-block;font-family:Montserrat;font-weight:800;font-size:9px;letter-spacing:2px;text-transform:uppercase;background:var(--yellow);color:var(--primary-dark);padding:4px 12px;border-radius:3px;margin-bottom:16px}
+
+/* ═══════ KICKER ═══════ */
+.kicker{font-family:Montserrat;font-weight:700;font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.kicker::before{content:'';display:inline-block;width:16px;height:2px;background:var(--green);flex-shrink:0}
+
+/* ═══════ LAYOUT ═══════ */
+.container{max-width:1080px;margin:0 auto;padding:0 24px}
+.section{padding:48px 0}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:768px){.two-col{grid-template-columns:1fr}}
+
+/* ═══════ PROSE ═══════ */
+.prose{max-width:800px}
+.prose h2{font-family:Montserrat;font-weight:700;font-size:22px;color:var(--primary);letter-spacing:-.3px;margin-bottom:14px}
+.prose p{font-family:'Source Sans 3';font-weight:400;font-size:15px;line-height:1.7;color:var(--text-body);margin-bottom:14px}
+.prose p strong{font-weight:600;color:var(--text-dark)}
+
+/* ═══════ CARDS ═══════ */
+.card{background:var(--card-bg);border-radius:10px;border-top:3px solid var(--primary);box-shadow:0 1px 5px rgba(0,40,104,.07);overflow:hidden;animation:fadeUp .5s ease forwards;opacity:0;transition:box-shadow .2s}
+.card:hover{box-shadow:0 4px 16px rgba(0,40,104,.1)}
+.card-header{background:var(--primary);padding:16px 26px;display:flex;justify-content:space-between;align-items:center}
+.card-header h3{font-family:Montserrat;font-weight:700;font-size:15px;color:#fff;letter-spacing:-.2px}
+.card-header .badge{font-family:Montserrat;font-weight:700;font-size:9px;letter-spacing:1.2px;text-transform:uppercase;background:var(--yellow);color:var(--primary-dark);padding:3px 10px;border-radius:3px}
+.card-body{padding:26px}
+.card.green-top{border-top-color:var(--green)}
+.card.red-top{border-top-color:var(--red)}
+.card.yellow-top{border-top-color:var(--yellow)}
+
+/* ═══════ EXEC GRID ═══════ */
+.exec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.exec-card{background:#fff;border-radius:10px;padding:24px;text-align:center;border-top:3px solid var(--primary);box-shadow:0 1px 5px rgba(0,40,104,.07);animation:fadeUp .5s ease forwards;opacity:0}
+.exec-n{font-family:Montserrat;font-weight:800;font-size:38px;line-height:1;color:var(--primary)}
+.exec-l{font-family:Montserrat;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--silver);margin-top:6px}
+.exec-d{font-family:'Source Sans 3';font-weight:400;font-size:13px;color:var(--text-body);margin-top:8px}
+
+/* ═══════ INFO BOX ═══════ */
+.info-box{background:var(--silver-bg);border-left:3px solid var(--primary-mid);border-radius:0 8px 8px 0;padding:18px 22px;margin:18px 0}
+.info-box.green{background:var(--green-pale);border-left-color:var(--green)}
+.info-box.yellow{background:var(--yellow-pale);border-left-color:var(--yellow-dark)}
+.info-box.red{background:#fde8ec;border-left-color:var(--red)}
+.info-box-t{font-family:Montserrat;font-weight:700;font-size:9px;text-transform:uppercase;letter-spacing:1.3px;color:var(--primary-mid);margin-bottom:6px}
+.info-box.green .info-box-t{color:var(--green-dark)}
+.info-box.yellow .info-box-t{color:var(--yellow-dark)}
+.info-box.red .info-box-t{color:var(--red)}
+.info-box p{font-family:'Source Sans 3';font-weight:400;font-size:13.5px;color:var(--text-body);line-height:1.6}
+
+/* ═══════ DIVIDER ═══════ */
+.divider{height:3px;display:flex;max-width:200px;margin:0 auto;border-radius:2px;overflow:hidden}
+.divider span{flex:1}
+.d1{background:var(--green)}.d2{background:var(--yellow)}.d3{background:var(--usa-red)}.d4{background:var(--primary)}
+
+/* ═══════ BAR CHART ═══════ */
+.bar-list{display:flex;flex-direction:column;gap:14px}
+.bar-item{display:flex;align-items:center;gap:12px}
+.bar-label{font-family:Montserrat;font-weight:600;font-size:11.5px;color:var(--text-dark);width:130px;text-align:right;flex-shrink:0}
+.bar-track{flex:1;background:var(--silver-bg);height:24px;border-radius:5px;overflow:hidden}
+.bar-fill{height:100%;border-radius:5px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px}
+.bar-fill.navy{background:var(--primary)}.bar-fill.green{background:var(--green)}.bar-fill.yellow{background:var(--yellow-dark)}.bar-fill.red{background:var(--red)}.bar-fill.silver{background:var(--silver)}
+.bar-v{font-family:Montserrat;font-weight:700;font-size:11px;color:#fff}
+.bar-fill.yellow .bar-v{color:var(--primary-dark)}
+
+/* ═══════ DAY GRID ═══════ */
+.day-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.day-card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 5px rgba(0,40,104,.07);animation:fadeUp .5s ease forwards;opacity:0}
+.day-top{padding:20px;color:#fff}
+.day-num{font-family:Montserrat;font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:1.6px;opacity:.7}
+.day-loc{font-family:Montserrat;font-weight:700;font-size:14px;margin-top:4px}
+.day-date{font-family:'Source Sans 3';font-weight:400;font-size:12px;opacity:.7;margin-top:2px}
+.day-body{padding:20px}
+.day-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--silver-bg)}
+.day-row:last-child{border-bottom:none}
+.day-rn{font-family:'Source Sans 3';font-weight:500;font-size:13px;color:var(--text-body)}
+.day-rv{font-family:Montserrat;font-weight:700;font-size:14px;color:var(--primary)}
+.day-total{background:var(--silver-bg);padding:12px 20px;display:flex;justify-content:space-between}
+.day-tl{font-family:Montserrat;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--silver)}
+.day-tv{font-family:Montserrat;font-weight:800;font-size:18px;color:var(--primary)}
+
+/* ═══════ PROC TABLE ═══════ */
+.ptable{width:100%;border-collapse:separate;border-spacing:0;font-size:13px}
+.ptable thead th{background:var(--primary);color:#fff;font-family:Montserrat;font-weight:700;font-size:9px;text-transform:uppercase;letter-spacing:1.2px;padding:12px 16px;text-align:left}
+.ptable thead th:first-child{border-radius:8px 0 0 0}.ptable thead th:last-child{border-radius:0 8px 0 0;text-align:right}
+.ptable tbody td{padding:12px 16px;border-bottom:1px solid var(--silver-bg)}
+.ptable tbody td:first-child{font-family:Montserrat;font-weight:700;color:var(--primary);font-size:12px}
+.ptable tbody td:last-child{font-family:Montserrat;font-weight:700;text-align:right;color:var(--green-dark);font-size:13px}
+.ptable tbody td:nth-child(2){font-family:'Source Sans 3';color:var(--text-body)}
+.ptable tfoot td{padding:14px 16px;background:var(--silver-bg);font-family:Montserrat;font-weight:700;font-size:13px;color:var(--primary)}
+.ptable tfoot td:last-child{text-align:right;font-size:16px}
+.ptable tfoot td:first-child{border-radius:0 0 0 8px}.ptable tfoot td:last-child{border-radius:0 0 8px 0}
+
+/* ═══════ PARTNER GRID ═══════ */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px}
+.pcard{background:#fff;border-radius:10px;padding:24px;text-align:center;border-top:3px solid var(--silver-light);box-shadow:0 1px 5px rgba(0,40,104,.05)}
+.pcard-icon{width:48px;height:48px;border-radius:50%;margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-family:Montserrat;font-weight:800;font-size:16px;color:#fff}
+.pcard-name{font-family:Montserrat;font-weight:700;font-size:13px;color:var(--primary);margin-bottom:4px}
+.pcard-desc{font-family:'Source Sans 3';font-weight:400;font-size:12.5px;color:var(--silver);line-height:1.5}
+
+/* ═══════ BUDGET TABLE ═══════ */
+.budget-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--silver-bg)}
+.budget-row:last-child{border-bottom:none}
+.budget-item{font-family:'Source Sans 3';font-weight:500;font-size:14px;color:var(--text-dark)}
+.budget-note{font-family:'Source Sans 3';font-weight:400;font-size:12px;color:var(--silver);margin-top:2px}
+.budget-cost{font-family:Montserrat;font-weight:700;font-size:15px;color:var(--green-dark)}
+.budget-total{display:flex;justify-content:space-between;padding:16px 0;border-top:2px solid var(--primary)}
+.budget-total .budget-item{font-family:Montserrat;font-weight:700;font-size:14px;color:var(--primary)}
+.budget-total .budget-cost{font-size:20px;color:var(--primary)}
+
+/* ═══════ CALLOUT BOX ═══════ */
+.callout{background:var(--primary);border-radius:10px;padding:28px;color:#fff;position:relative;overflow:hidden}
+.callout::after{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,223,0,.1) 0%,transparent 70%)}
+.callout h3{font-family:Montserrat;font-weight:700;font-size:16px;margin-bottom:12px}
+.callout p{font-family:'Source Sans 3';font-weight:300;font-size:14px;line-height:1.7;color:rgba(255,255,255,.8)}
+.callout .hl{color:var(--yellow);font-weight:500}
+
+/* ═══════ CEARA CARDS ═══════ */
+.ceara-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:20px}
+.ceara-card{background:#fff;border-radius:10px;padding:20px;box-shadow:0 1px 5px rgba(0,40,104,.05);border-bottom:3px solid var(--yellow)}
+.ceara-card h4{font-family:Montserrat;font-weight:700;font-size:13px;color:var(--primary);margin-bottom:6px}
+.ceara-card p{font-family:'Source Sans 3';font-weight:400;font-size:12.5px;color:var(--text-body);line-height:1.55}
+
+/* ═══════ PHOTO GALLERY ═══════ */
+.photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.photo-slot{aspect-ratio:4/3;background:var(--silver-bg);border-radius:8px;border:2px dashed var(--silver-light);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:border-color .2s,box-shadow .2s}
+.photo-slot:hover{border-color:var(--green);box-shadow:0 2px 12px rgba(0,156,59,.1)}
+.photo-slot img{width:100%;height:100%;object-fit:cover;border-radius:6px}
+.photo-slot-l{font-family:Montserrat;font-weight:600;font-size:9px;letter-spacing:.8px;color:var(--silver);text-transform:uppercase}
+.photo-slot-n{font-family:'Source Sans 3';font-weight:400;font-size:11px;color:var(--silver-light);margin-top:4px}
+
+/* ═══════ SECTION HEADER (2022) ═══════ */
+.section-header-2022{background:linear-gradient(135deg,var(--green-dark) 0%,var(--green) 60%,#2db854 100%);color:#fff;padding:40px 30px;text-align:center;position:relative;overflow:hidden}
+.section-header-2022::before{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;display:flex}
+.section-header-2022 h2{font-family:Montserrat;font-weight:700;font-size:24px;letter-spacing:-.3px;margin-bottom:6px}
+.section-header-2022 p{font-family:'Source Sans 3';font-weight:300;font-size:15px;color:rgba(255,255,255,.75);max-width:600px;margin:0 auto}
+
+/* ═══════ FOOTER ═══════ */
+.report-footer{text-align:center;padding:40px 24px;position:relative}
+.report-footer::before{content:'';display:block;width:80%;max-width:500px;height:1px;background:linear-gradient(to right,transparent,var(--silver-pale),transparent);margin:0 auto 24px}
+.report-footer p{font-family:'Source Sans 3';font-weight:400;font-size:12px;color:var(--silver)}
+.report-footer .fb{font-family:Montserrat;font-weight:600;font-size:11px;color:var(--primary-light)}
+
+/* ═══════ RESPONSIVE ═══════ */
+@media(max-width:640px){
+  .hero{padding:50px 20px 40px}
+  .hero h1{font-size:24px}
+  .hero-stats{gap:20px}
+  .hero-stat-n{font-size:30px}
+  .exec-grid{grid-template-columns:1fr 1fr}
+  .day-grid{grid-template-columns:1fr}
+  .photo-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+  .bar-label{width:90px;font-size:10px}
+}
+/* ═══════ LANGUAGE TOGGLE ═══════ */
+.lang-toggle{position:fixed;top:16px;right:16px;z-index:999;display:flex;background:rgba(0,40,104,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:8px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.1)}
+.lang-btn{font-family:Montserrat;font-weight:700;font-size:11px;letter-spacing:.8px;border:none;padding:10px 16px;cursor:pointer;display:flex;align-items:center;gap:6px;transition:background .2s,color .2s;background:transparent;color:rgba(255,255,255,.5)}
+.lang-btn.active{background:var(--yellow);color:var(--primary-dark)}
+.lang-btn:hover:not(.active){background:rgba(255,255,255,.1);color:#fff}
+.lang-btn .flag{font-size:14px;line-height:1}
+@media(max-width:640px){.lang-toggle{top:10px;right:10px}.lang-btn{padding:8px 12px;font-size:10px}}
+@media print{.lang-toggle{display:none}}
+
+/* ═══════ CAROUSEL (unchanged below) ═══════ */
+.carousel{position:relative;width:100%;max-width:820px;margin:32px auto 0;border-radius:12px;overflow:hidden;background:#000;box-shadow:0 4px 24px rgba(0,40,104,.15)}
+.carousel-viewport{position:relative;width:100%;aspect-ratio:16/10;overflow:hidden}
+.carousel-slide{position:absolute;inset:0;opacity:0;transition:opacity .6s ease,transform .6s ease;transform:scale(1.03);pointer-events:none}
+.carousel-slide.active{opacity:1;transform:scale(1);pointer-events:auto;z-index:2}
+.carousel-slide img{width:100%;height:100%;object-fit:cover;display:block}
+.carousel-caption{position:absolute;bottom:0;left:0;right:0;padding:20px 24px 18px;background:linear-gradient(transparent,rgba(0,20,50,.85));z-index:3;pointer-events:none}
+.carousel-caption-title{font-family:Montserrat;font-weight:700;font-size:15px;color:#fff;letter-spacing:-.2px}
+.carousel-caption-sub{font-family:'Source Sans 3';font-weight:300;font-size:12.5px;color:rgba(255,255,255,.65);margin-top:3px}
+.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:44px;height:44px;border-radius:50%;border:none;background:rgba(0,40,104,.55);color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .15s;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.carousel-btn:hover{background:rgba(0,40,104,.8);transform:translateY(-50%) scale(1.08)}
+.carousel-btn:active{transform:translateY(-50%) scale(.95)}
+.carousel-btn.prev{left:14px}
+.carousel-btn.next{right:14px}
+.carousel-dots{display:flex;justify-content:center;gap:7px;padding:14px 0;background:var(--primary-dark)}
+.carousel-dot{width:8px;height:8px;border-radius:50%;border:none;background:rgba(255,255,255,.25);cursor:pointer;transition:background .25s,transform .2s;padding:0}
+.carousel-dot.active{background:var(--yellow);transform:scale(1.25)}
+.carousel-dot:hover:not(.active){background:rgba(255,255,255,.5)}
+.carousel-counter{position:absolute;top:14px;right:14px;z-index:5;font-family:Montserrat;font-weight:700;font-size:10px;letter-spacing:1px;color:#fff;background:rgba(0,40,104,.6);padding:4px 10px;border-radius:20px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.carousel-kicker{position:absolute;top:14px;left:14px;z-index:5;font-family:Montserrat;font-weight:700;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:3px}
+.carousel-kicker.coast{background:var(--brazil-green);color:#fff}
+.carousel-kicker.interior{background:var(--yellow);color:var(--primary-dark)}
+
+@media print{
+  body{background:#fff}
+  .card,.exec-card,.day-card{box-shadow:none;break-inside:avoid}
+  .hero{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .carousel-btn{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- LANGUAGE TOGGLE -->
+<div class="lang-toggle" id="langToggle">
+  <button class="lang-btn active" data-lang="en" onclick="setLang('en')"><span class="flag">🇺🇸</span> EN</button>
+  <button class="lang-btn" data-lang="pt" onclick="setLang('pt')"><span class="flag">🇧🇷</span> PT</button>
+</div>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="planning-badge">Mission Proposal 2027</span>
+    <div class="hero-flags">
+      <span class="flag-pill usa"><span class="flag-emoji">🇺🇸</span> AUGUSTA, GA</span>
+      <span class="hero-arrow">&rarr;</span>
+      <span class="flag-pill brazil"><span class="flag-emoji">🇧🇷</span> QUIXAD&Aacute;, CE</span>
+    </div>
+    <h1>Brazil Mission <span class="y">Trip</span> <span class="g">2027</span></h1>
+    <p class="hero-sub">A humanitarian dental outreach mission connecting Augusta University and Centro Universit&aacute;rio Cat&oacute;lica de Quixad&aacute; &mdash; delivering oral healthcare to underserved communities in the Brazilian Sert&atilde;o. Summer 2027, June 14 &ndash; July 5. Building on a proven 2022 partnership.</p>
+    <div class="hero-stats">
+      <div><div class="hero-stat-n">~16</div><div class="hero-stat-l">Team Members</div></div>
+      <div><div class="hero-stat-n">4+</div><div class="hero-stat-l">Days of Service</div></div>
+      <div><div class="hero-stat-n">5:1</div><div class="hero-stat-l">USD to BRL Rate</div></div>
+      <div><div class="hero-stat-n">2</div><div class="hero-stat-l">Nations United</div></div>
+    </div>
+  </div>
+  <div class="hero-stripe"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>
+</section>
+
+<!-- ═══════════════ MISSION OVERVIEW ═══════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="kicker">Mission Overview</div>
+    <div class="prose" style="margin-bottom:30px">
+      <h2>What We Are Planning</h2>
+      <p>The <strong>Brazil Mission Trip 2027</strong> will bring a team of approximately <strong>10 dental students, 5 faculty members, and a dental hygienist</strong> from Augusta University to <strong>Quixad&aacute;, Cear&aacute;, Brazil</strong> for a multi-day humanitarian dental outreach mission. Partnering once again with <strong>Centro Universit&aacute;rio Cat&oacute;lica de Quixad&aacute; (Unicat&oacute;lica)</strong>, the team will provide comprehensive dental care &mdash; restorative treatment, periodontics, oral surgery, diagnostic imaging, and oral health education &mdash; to underserved communities in the semi-arid Sert&atilde;o region, where access to dental care is critically limited.</p>
+      <p>This mission builds on the extraordinary success of the <strong>2022 Brazil Mission Trip</strong>, which was organized between the University of Detroit Mercy and Unicat&oacute;lica. That mission treated <strong>474 patients</strong> and performed <strong>2,396 procedures</strong> in just four days &mdash; establishing a proven framework, community relationships, and logistical infrastructure that the 2027 mission will leverage and expand. Full data from the 2022 mission is documented later in this report as evidence of feasibility and impact.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="info-box green" style="margin:0">
+        <div class="info-box-t">Proposed Team Composition</div>
+        <p><strong>10 dental students</strong> from Augusta University's Dental College of Georgia, <strong>5 faculty members</strong> (licensed supervising dentists), and <strong>1 dental hygienist</strong> providing preventive care and oral health education. The team will partner with Brazilian students and faculty from Unicat&oacute;lica, effectively doubling clinical capacity on the ground. All patient care will be supervised by licensed faculty from both institutions.</p>
+      </div>
+      <div class="info-box green" style="margin:0">
+        <div class="info-box-t">Confirmed Window &mdash; Summer Break 2027</div>
+        <p>The mission will take place during Augusta University&rsquo;s <strong>three-week summer break: June 14 &ndash; July 5, 2027</strong>. We are currently coordinating with Unicat&oacute;lica and local partners to determine which week within this window works best for all parties. The three options under consideration:</p>
+        <p style="margin-top:10px"><strong>Week A &mdash; June 14&ndash;20</strong> &nbsp;|&nbsp; <strong>Week B &mdash; June 21&ndash;27</strong> &nbsp;|&nbsp; <strong>Week C &mdash; June 28&ndash;July 5</strong></p>
+        <p style="margin-top:10px">The trip itself is expected to span approximately <strong>10 days</strong> &mdash; including travel to and from Fortaleza, ground transit to Quixad&aacute;, 4&ndash;6 clinical service days, orientation, and a cultural exchange day. The final schedule will depend on faculty availability, Brazilian academic calendar alignment, flight logistics, and community readiness in Quixad&aacute;.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider"><span class="d1"></span><span class="d2"></span><span class="d4"></span><span class="d3"></span></div></div>
+
+<!-- ═══════════════ ABOUT THE REGION ═══════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="kicker">The Setting</div>
+    <div class="prose" style="margin-bottom:28px">
+      <h2>Quixad&aacute;, Cear&aacute; &mdash; The Heart of the Sert&atilde;o</h2>
+      <p><strong>Quixad&aacute;</strong> (from the indigenous Tupi language, meaning &ldquo;rock corral&rdquo; or &ldquo;curral de pedras&rdquo;) is a municipality of approximately 87,000 people located in the <strong>Sert&atilde;o Central</strong> &mdash; the semi-arid interior of Cear&aacute; state, roughly 170 km (105 miles) south of the capital Fortaleza. Known locally as the &ldquo;Land of Monoliths&rdquo; for its dramatic inselberg rock formations, including the iconic <strong>Pedra da Galinha Choca</strong> (Brooding Hen Rock), Quixad&aacute; sits in one of the most arid regions of Brazil, where the <strong>Caatinga biome</strong> dominates &mdash; a landscape of thorny shrubland, cacti, and sparse vegetation adapted to prolonged drought.</p>
+      <p>The Sert&atilde;o has historically been one of Brazil&rsquo;s most economically disadvantaged regions. Irregular rainfall, poor soil quality, and limited infrastructure have perpetuated cycles of poverty &mdash; particularly in the <strong>rural districts</strong> surrounding Quixad&aacute;. Communities like Residencial Raquel de Queiroz and S&atilde;o Jo&atilde;o dos Queiroz, where the 2022 mission team provided care, are located far from urban health centers. Many residents have <strong>never seen a dentist</strong>, resulting in severe untreated dental disease, infections, and tooth loss that deeply impacts nutrition, social participation, and quality of life.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="callout">
+        <h3>Why These Communities Are Underserved</h3>
+        <p>Brazil&rsquo;s <span class="hl">Sert&atilde;o</span> region faces a convergence of challenges that make healthcare delivery extremely difficult. The semi-arid climate produces chronic droughts that can last years, concentrating poverty in rural settlements. While Brazil&rsquo;s public health system (SUS) provides basic medical coverage, <span class="hl">dental care remains critically scarce</span> in rural Cear&aacute;. The nearest specialist may be hours away on unpaved roads. Many families survive on subsistence farming and government aid programs. The average annual rainfall is only 400&ndash;700mm, and temperatures regularly exceed 35&deg;C (95&deg;F). The Caatinga biome &mdash; the only biome exclusive to Brazil &mdash; defines the landscape: drought-resistant vegetation, rocky outcrops, and seasonal rivers that run dry for months.</p>
+      </div>
+      <div>
+        <div class="info-box" style="margin-top:0">
+          <div class="info-box-t">About Cear&aacute; State</div>
+          <p>Cear&aacute; is a state of striking contrasts. Its 573 km Atlantic coastline features world-famous beaches and tourism destinations, while its interior remains one of the poorest regions in the Americas. The state&rsquo;s HDI varies dramatically &mdash; coastal cities like <strong>Fortaleza</strong> (pop. 2.7M) enjoy modern infrastructure, while interior municipalities lag far behind in healthcare, education, and income indicators.</p>
+        </div>
+        <div class="info-box green">
+          <div class="info-box-t">The Contrast: Coast vs. Interior</div>
+          <p>Fortaleza, the state capital and 5th largest city in Brazil, is a major tourism hub and the gateway airport (Pinto Martins International) for the mission team. Nearby attractions like <strong>Beach Park</strong> (Latin America&rsquo;s largest water park complex) and the world-renowned <strong>Jericoacoara</strong> beach destination draw global visitors &mdash; yet just 170 km inland, communities in the Sert&atilde;o lack basic dental care. This mission bridges that gap.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ceara-grid" style="margin-top:24px">
+      <div class="ceara-card">
+        <h4>Fortaleza</h4>
+        <p>Capital of Cear&aacute; and 5th largest city in Brazil. Gateway to the state&rsquo;s famous coastline. Home to Pinto Martins International Airport, where the Augusta team will arrive.</p>
+      </div>
+      <div class="ceara-card">
+        <h4>Beach Park</h4>
+        <p>Latin America&rsquo;s largest water park complex, located in Porto das Dunas, just south of Fortaleza. A symbol of Cear&aacute;&rsquo;s booming coastal tourism economy that contrasts sharply with the interior.</p>
+      </div>
+      <div class="ceara-card">
+        <h4>Jericoacoara</h4>
+        <p>A world-renowned beach destination (often called &ldquo;Jeri&rdquo;) on Cear&aacute;&rsquo;s western coast. Protected as a national park, its sand dunes and crystal lagoons attract visitors from across the globe.</p>
+      </div>
+      <div class="ceara-card">
+        <h4>Quixad&aacute;</h4>
+        <p>Known as the &ldquo;Land of Monoliths&rdquo; for its towering inselbergs. Despite breathtaking natural beauty, poverty persists in the interior. The Sert&atilde;o&rsquo;s 28 million residents face chronic water insecurity and limited healthcare access.</p>
+      </div>
+    </div>
+
+    <!-- REGION PHOTO CAROUSEL -->
+    <div style="margin-top:32px">
+      <div class="kicker">The Land of Contrasts</div>
+      <p style="font-family:'Source Sans 3';font-size:14px;color:var(--text-body);margin-bottom:4px;max-width:600px">From the turquoise coastline of Fortaleza and Jericoacoara to the rugged monoliths and reservoirs of the Sert&atilde;o &mdash; Cear&aacute; in pictures.</p>
+    </div>
+    <div class="carousel" id="regionCarousel">
+      <div class="carousel-viewport">
+        <div class="carousel-slide active" data-index="0">
+          <span class="carousel-kicker coast">Coast</span>
+          <img src="jericoacoara.jpg" alt="Jericoacoara beach and dunes">
+          <div class="carousel-caption"><div class="carousel-caption-title">Jericoacoara</div><div class="carousel-caption-sub">World-famous beach destination on Cear&aacute;&rsquo;s western coast &mdash; sand dunes, crystal lagoons, and endless horizons</div></div>
+        </div>
+        <div class="carousel-slide" data-index="1">
+          <span class="carousel-kicker coast">Coast</span>
+          <img src="99.jpg" alt="Cear&aacute; coastline">
+          <div class="carousel-caption"><div class="carousel-caption-title">Cear&aacute; Coastline</div><div class="carousel-caption-sub">573 km of Atlantic shoreline featuring some of Brazil&rsquo;s most spectacular beaches</div></div>
+        </div>
+        <div class="carousel-slide" data-index="2">
+          <span class="carousel-kicker coast">Coast</span>
+          <img src="Anderps_067.JPG" alt="Coastal Cear&aacute;">
+          <div class="carousel-caption"><div class="carousel-caption-title">Coastal Cear&aacute;</div><div class="carousel-caption-sub">The tourism-rich coastline that draws visitors from around the world &mdash; a stark contrast to the interior</div></div>
+        </div>
+        <div class="carousel-slide" data-index="3">
+          <span class="carousel-kicker coast">Coast</span>
+          <img src="brazil-custom-private-travel-pipa-praia-do-amor.webp" alt="Praia do Amor">
+          <div class="carousel-caption"><div class="carousel-caption-title">Northeastern Beaches</div><div class="carousel-caption-sub">Brazil&rsquo;s Northeast is home to some of the most beautiful and pristine coastline in South America</div></div>
+        </div>
+        <div class="carousel-slide" data-index="4">
+          <span class="carousel-kicker coast">Coast</span>
+          <img src="5189ce09-d56b-4efb-9a81-daa0724270bd.jpg" alt="Beach landscape">
+          <div class="carousel-caption"><div class="carousel-caption-title">Tropical Paradise</div><div class="carousel-caption-sub">Warm waters and golden sand just hours from the underserved communities where the mission team will work</div></div>
+        </div>
+        <div class="carousel-slide" data-index="5">
+          <span class="carousel-kicker coast">Coast</span>
+          <img src="Fortaleza-O-que-Fazer-Melhores-Passeios-8.jpg" alt="Fortaleza attractions">
+          <div class="carousel-caption"><div class="carousel-caption-title">Fortaleza</div><div class="carousel-caption-sub">Capital of Cear&aacute; and 5th largest city in Brazil &mdash; the team&rsquo;s arrival gateway at Pinto Martins International Airport</div></div>
+        </div>
+        <div class="carousel-slide" data-index="6">
+          <span class="carousel-kicker coast">Coast</span>
+          <img src="15-praias-em-fortaleza-e-arredores-1920x1080-1.jpg.webp" alt="Beaches near Fortaleza">
+          <div class="carousel-caption"><div class="carousel-caption-title">Beaches of Fortaleza</div><div class="carousel-caption-sub">Fortaleza&rsquo;s urban beaches and nearby coastal towns attract millions of visitors annually</div></div>
+        </div>
+        <div class="carousel-slide" data-index="7">
+          <span class="carousel-kicker coast">Coast</span>
+          <img src="atracoes-beach-park-parque-aquatico-scaled.webp" alt="Beach Park water park attractions">
+          <div class="carousel-caption"><div class="carousel-caption-title">Beach Park</div><div class="carousel-caption-sub">Latin America&rsquo;s largest water park complex &mdash; located in Porto das Dunas, just south of Fortaleza</div></div>
+        </div>
+        <div class="carousel-slide" data-index="8">
+          <span class="carousel-kicker coast">Coast</span>
+          <img src="18391f80-bcf6-4729-91e8-ed114a59cd9a.jpg.webp" alt="Beach Park resort and slides">
+          <div class="carousel-caption"><div class="carousel-caption-title">Beach Park Resort</div><div class="carousel-caption-sub">A symbol of Cear&aacute;&rsquo;s booming coastal tourism economy &mdash; world-class entertainment just hours from communities without dentists</div></div>
+        </div>
+        <div class="carousel-slide" data-index="9">
+          <span class="carousel-kicker coast">Coast</span>
+          <img src="historia-parque-aquatico-beach-park-scaled.webp" alt="Beach Park water park aerial view">
+          <div class="carousel-caption"><div class="carousel-caption-title">Beach Park &mdash; Aerial View</div><div class="carousel-caption-sub">The contrast between this thriving coastal attraction and the Sert&atilde;o&rsquo;s healthcare desert, just 170 km inland, defines the mission&rsquo;s purpose</div></div>
+        </div>
+        <div class="carousel-slide" data-index="10">
+          <span class="carousel-kicker coast">Coast</span>
+          <img src="f4027b8e-267b-4799-9e2b-f2dd5aca955a.jpg.webp" alt="Coastal scenery">
+          <div class="carousel-caption"><div class="carousel-caption-title">Cear&aacute; Seascape</div><div class="carousel-caption-sub">The vibrant coastal economy and tourism infrastructure contrast sharply with conditions 170 km inland</div></div>
+        </div>
+        <div class="carousel-slide" data-index="11">
+          <span class="carousel-kicker coast">Coast</span>
+          <img src="Praias-de-Fortaleza.webp" alt="Praias de Fortaleza">
+          <div class="carousel-caption"><div class="carousel-caption-title">Praias de Fortaleza</div><div class="carousel-caption-sub">Iconic waterfront of Cear&aacute;&rsquo;s capital city &mdash; modern infrastructure that the interior lacks</div></div>
+        </div>
+        <div class="carousel-slide" data-index="12">
+          <span class="carousel-kicker coast">Coast</span>
+          <img src="33528545495_e134bd8dd6_h.jpg" alt="Scenic coast">
+          <div class="carousel-caption"><div class="carousel-caption-title">The Other Brazil</div><div class="carousel-caption-sub">World-class tourism revenue flows along the coast while rural Sert&atilde;o communities go without basic dental care</div></div>
+        </div>
+        <div class="carousel-slide" data-index="13">
+          <span class="carousel-kicker coast">Coast</span>
+          <img src="dbdf6c41849537.57b697ad1e773.jpg.webp" alt="Brazilian coast aerial">
+          <div class="carousel-caption"><div class="carousel-caption-title">Aerial Coastline</div><div class="carousel-caption-sub">Brazil&rsquo;s northeastern coast seen from above &mdash; a booming tourism economy that bypasses the arid interior</div></div>
+        </div>
+        <div class="carousel-slide" data-index="14">
+          <span class="carousel-kicker interior">Interior</span>
+          <img src="Sertao_nordestino_0.jpg" alt="Sert&atilde;o nordestino landscape">
+          <div class="carousel-caption"><div class="carousel-caption-title">The Sert&atilde;o Nordestino</div><div class="carousel-caption-sub">Brazil&rsquo;s semi-arid interior &mdash; home to 28 million people facing chronic drought, poverty, and limited healthcare access</div></div>
+        </div>
+        <div class="carousel-slide" data-index="15">
+          <span class="carousel-kicker interior">Interior</span>
+          <img src="cedro.jpg.webp" alt="A&ccedil;ude Cedro reservoir Quixad&aacute;">
+          <div class="carousel-caption"><div class="carousel-caption-title">A&ccedil;ude Cedro &mdash; Quixad&aacute;</div><div class="carousel-caption-sub">Historic reservoir built in the late 1800s to combat drought &mdash; a lifeline for the semi-arid interior</div></div>
+        </div>
+        <div class="carousel-slide" data-index="16">
+          <span class="carousel-kicker interior">Interior</span>
+          <img src="Ao-Por-do-Sol-na-Represa-do-Acude-Cedro_-localizada-na-Cidade-de-_quixada-_-no-interior-do-Estado-do.jpg.webp" alt="Sunset at A&ccedil;ude Cedro">
+          <div class="carousel-caption"><div class="carousel-caption-title">Sunset at A&ccedil;ude Cedro</div><div class="carousel-caption-sub">Quixad&aacute;&rsquo;s monolithic landscape at golden hour &mdash; breathtaking beauty masking deep poverty and healthcare scarcity</div></div>
+        </div>
+        <span class="carousel-counter" id="regionCounter">1 / 17</span>
+      </div>
+      <button class="carousel-btn prev" onclick="navCarousel('region',-1)" aria-label="Previous">&lsaquo;</button>
+      <button class="carousel-btn next" onclick="navCarousel('region',1)" aria-label="Next">&rsaquo;</button>
+      <div class="carousel-dots" id="regionDots"></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="container"><div class="divider"><span class="d3"></span><span class="d4"></span><span class="d2"></span><span class="d1"></span></div></div>
+
+<!-- ═══════════════ BUDGET & LOGISTICS ═══════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="kicker">Budget &amp; Logistics</div>
+    <div class="prose" style="margin-bottom:28px">
+      <h2>Affordable Impact &mdash; The Exchange Rate Advantage</h2>
+      <p>One of the most compelling aspects of this mission is its <strong>extraordinary cost-efficiency</strong>. The current USD-to-BRL exchange rate of approximately <strong>1 USD = 5.0 BRL</strong> means that local expenses in Brazil &mdash; accommodation, meals, and incidentals &mdash; are remarkably affordable for American participants. A quality hotel room in Quixad&aacute; costs roughly R$120&ndash;180 per night (approximately $24&ndash;36 USD), and a full meal at a local restaurant runs R$20&ndash;40 (approximately $4&ndash;8 USD).</p>
+      <p>The primary cost for each student is <strong>international airfare</strong>, estimated at approximately <strong>$1,000 USD</strong> round-trip (Augusta &rarr; Fortaleza, typically routed through S&atilde;o Paulo or Miami). <strong>All ground transportation in Brazil is provided at no cost to participants</strong> &mdash; a dedicated charter bus will transport the team between Fortaleza, Quixad&aacute;, and each service location. Local authorities, including <strong>police escorts and ambulance support</strong>, will accompany the team to and from rural outreach sites, ensuring safety and logistical coordination throughout the mission. With corporate sponsorship offsetting materials, equipment, and supply costs, the per-student out-of-pocket expense for a week-long international clinical mission is remarkably accessible.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="card" style="animation-delay:.1s">
+        <div class="card-header" style="background:var(--green-dark)">
+          <h3>Estimated Per-Student Cost</h3>
+          <span class="badge">2027 Estimate</span>
+        </div>
+        <div class="card-body">
+          <div class="budget-row">
+            <div><div class="budget-item">Round-trip airfare</div><div class="budget-note">Augusta &rarr; Fortaleza (via connecting hub)</div></div>
+            <div class="budget-cost">~$1,000</div>
+          </div>
+          <div class="budget-row">
+            <div><div class="budget-item">Accommodation (5&ndash;7 nights)</div><div class="budget-note">Hotel in Quixad&aacute; at ~$30/night</div></div>
+            <div class="budget-cost">~$150&ndash;210</div>
+          </div>
+          <div class="budget-row">
+            <div><div class="budget-item">Meals (5&ndash;7 days)</div><div class="budget-note">3 meals/day at ~$5&ndash;8 each</div></div>
+            <div class="budget-cost">~$100&ndash;170</div>
+          </div>
+          <div class="budget-row">
+            <div><div class="budget-item">Ground transportation</div><div class="budget-note">Charter bus + police escort provided</div></div>
+            <div class="budget-cost" style="color:var(--green)">Provided</div>
+          </div>
+          <div class="budget-total">
+            <div class="budget-item">Estimated Total Per Student</div>
+            <div class="budget-cost">~$1,250&ndash;1,380</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card yellow-top" style="animation-delay:.2s">
+        <div class="card-header" style="background:var(--yellow-dark)">
+          <h3 style="color:var(--primary-dark)">Exchange Rate Context</h3>
+          <span class="badge" style="background:var(--primary);color:var(--yellow)">LIVE</span>
+        </div>
+        <div class="card-body">
+          <div style="text-align:center;padding:16px 0">
+            <div style="font-family:Montserrat;font-weight:800;font-size:52px;color:var(--primary);line-height:1">5.04</div>
+            <div style="font-family:Montserrat;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:var(--silver);margin-top:6px">Brazilian Reais per 1 US Dollar</div>
+            <div style="font-family:'Source Sans 3';font-size:12px;color:var(--silver-light);margin-top:4px">As of June 2026 &mdash; Rate subject to fluctuation</div>
+          </div>
+          <div class="info-box green" style="margin-bottom:0">
+            <div class="info-box-t">What This Means</div>
+            <p>At the current rate, every US dollar buys approximately <strong>5 Brazilian Reais</strong>. This makes Brazil one of the most cost-effective destinations for international dental missions. A full day of meals costs less than a single lunch in Augusta. Hotel rooms that would cost $150+ in the US run under $35 in Quixad&aacute;. This favorable exchange rate dramatically lowers the barrier to participation for students.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-box green" style="margin-top:24px">
+      <div class="info-box-t">On-the-Ground Logistics &mdash; Provided at No Cost</div>
+      <p>Local partners in Quixad&aacute; will coordinate all in-country transportation and safety logistics. A <strong>dedicated charter bus</strong> will shuttle the entire team between Fortaleza airport, the hotel in Quixad&aacute;, and each clinical site &mdash; including the remote rural schools that are inaccessible by regular transit. The <strong>Quixad&aacute; Municipal Government and local police</strong> will provide escort vehicles for travel to rural districts, ensuring safe passage on unpaved roads. <strong>Ambulance support</strong> will be on standby at each outreach location for medical emergencies. The municipal <strong>Secretaria de Sa&uacute;de</strong> (Health Department) will handle community pre-screening, patient scheduling, and site preparation. None of these services carry any cost to participating students or faculty.</p>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider"><span class="d4"></span><span class="d1"></span><span class="d3"></span><span class="d2"></span></div></div>
+
+<!-- ═══════════════ SPONSORS & PARTNERS ═══════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="kicker">Sponsors &amp; Partners</div>
+    <div class="prose" style="margin-bottom:28px">
+      <h2>Building a Coalition of Support</h2>
+      <p>The success of the 2027 mission depends on partnerships with academic institutions, professional organizations, and corporate sponsors. The following organizations represent our target coalition &mdash; combining institutional credibility, material support, equipment access, and financial sponsorship to make this mission possible.</p>
+    </div>
+
+    <div class="pgrid">
+      <div class="pcard" style="border-top-color:var(--primary)">
+        <div class="pcard-icon" style="background:var(--primary)">AU</div>
+        <div class="pcard-name">Augusta University</div>
+        <div class="pcard-desc">Dental College of Georgia &mdash; primary sending institution, providing students, faculty, and institutional support</div>
+      </div>
+      <div class="pcard" style="border-top-color:var(--green)">
+        <div class="pcard-icon" style="background:var(--green)">UC</div>
+        <div class="pcard-name">Unicat&oacute;lica de Quixad&aacute;</div>
+        <div class="pcard-desc">Host institution in Brazil &mdash; local students, faculty, facilities, community coordination, and patient pre-screening</div>
+      </div>
+      <div class="pcard" style="border-top-color:var(--yellow)">
+        <div class="pcard-icon" style="background:var(--yellow-dark);color:var(--primary-dark)">PFA</div>
+        <div class="pcard-name">Pierre Fauchard Academy</div>
+        <div class="pcard-desc">International honorary dental organization dedicated to the advancement of dentistry and global oral health equity</div>
+      </div>
+      <div class="pcard" style="border-top-color:var(--red)">
+        <div class="pcard-icon" style="background:var(--red)">GDA</div>
+        <div class="pcard-name">Georgia Dental Association</div>
+        <div class="pcard-desc">State professional dental association &mdash; potential sponsor supporting Georgia-based dental outreach initiatives</div>
+      </div>
+      <div class="pcard" style="border-top-color:var(--primary-mid)">
+        <div class="pcard-icon" style="background:var(--primary-mid)">H</div>
+        <div class="pcard-name">Hinman Dental Society</div>
+        <div class="pcard-desc">One of the largest dental meetings in the US, based in Atlanta &mdash; supporting dental education and community service</div>
+      </div>
+      <div class="pcard" style="border-top-color:var(--red)">
+        <div class="pcard-icon" style="background:var(--red)">3M</div>
+        <div class="pcard-name">3M Oral Care</div>
+        <div class="pcard-desc">Returning sponsor &mdash; provided dental materials and consumables for the 2022 mission; seeking continued partnership</div>
+      </div>
+      <div class="pcard" style="border-top-color:var(--primary)">
+        <div class="pcard-icon" style="background:var(--primary)">IV</div>
+        <div class="pcard-name">Ivoclar</div>
+        <div class="pcard-desc">Global leader in restorative and preventive dental materials &mdash; potential material sponsor for clinical supplies</div>
+      </div>
+      <div class="pcard" style="border-top-color:var(--green-dark)">
+        <div class="pcard-icon" style="background:var(--green-dark)">N</div>
+        <div class="pcard-name">NOMAD / KaVo Kerr</div>
+        <div class="pcard-desc">Portable handheld X-ray units (NOMAD Pro 2) &mdash; essential for diagnostic imaging in remote field locations</div>
+      </div>
+    </div>
+
+    <div class="info-box" style="margin-top:24px">
+      <div class="info-box-t">Additional Sponsorship Opportunities</div>
+      <p>We are actively exploring partnerships with additional dental manufacturers, philanthropic foundations, and corporate sponsors who share our commitment to global oral health equity. Sponsorship packages may include material donations, equipment loans, financial support for student travel, or named recognition in published mission reports and academic publications. Organizations such as <strong>Alpha Omega International Dental Society</strong> (who supported the 2022 mission), <strong>Colgate</strong>, <strong>Dentsply Sirona</strong>, and others are also being considered. If your organization is interested in supporting the 2027 mission, please reach out to discuss partnership opportunities.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ 2022 PROVEN TRACK RECORD HEADER ═══════════════ -->
+<div class="section-header-2022">
+  <div style="font-family:Montserrat;font-weight:700;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:var(--yellow);margin-bottom:12px">Proven Track Record</div>
+  <h2>🇺🇸 The 2022 Brazil Mission Trip 🇧🇷</h2>
+  <p>In August 2022, a partnership between the University of Detroit Mercy and Unicat&oacute;lica de Quixad&aacute; delivered four days of comprehensive dental care. The data below demonstrates the model, reach, and clinical impact of this proven framework.</p>
+  <div style="display:flex;gap:8px;justify-content:center;margin-top:16px">
+    <span style="font-family:Montserrat;font-weight:800;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;background:rgba(255,255,255,.15);color:#fff;padding:4px 12px;border-radius:3px">Detroit &rarr; Quixad&aacute;</span>
+    <span style="font-family:Montserrat;font-weight:800;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;background:var(--yellow);color:var(--primary-dark);padding:4px 12px;border-radius:3px">August 2022</span>
+    <span style="font-family:Montserrat;font-weight:800;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;background:rgba(255,255,255,.15);color:#fff;padding:4px 12px;border-radius:3px">Peer Reviewed</span>
+  </div>
+</div>
+
+<!-- ═══════════════ 2022 EXECUTIVE SUMMARY ═══════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="kicker">2022 Mission Results</div>
+    <div class="prose" style="margin-bottom:28px">
+      <h2>Executive Summary &mdash; 2022 Mission Data</h2>
+      <p>In August 2022, dental students and faculty from the <strong>University of Detroit Mercy</strong> traveled to Quixad&aacute;, partnering with Unicat&oacute;lica. Over four consecutive days, the combined teams delivered comprehensive dental care to <strong>474 patients</strong>, performing <strong>2,396 clinical procedures</strong> across five treatment categories. The mission was supported by <strong>3M</strong> (materials sponsorship), a <strong>NOMAD Pro 2 portable X-ray unit</strong> (manufacturer loaner), and the <strong>Alpha Omega International Dental Society</strong> (founded 1907 &mdash; the oldest international dental organization). The data was tabulated using SPSS Statistics 28.0.1 and subsequently published in <strong>Revista Express&atilde;o Cat&oacute;lica</strong> (v. 11, special edition, November 2022, ISSN: 2357-8483).</p>
+    </div>
+
+    <div class="exec-grid">
+      <div class="exec-card" style="animation-delay:.1s;border-top-color:var(--primary)">
+        <div class="exec-n" style="color:var(--primary)">474</div>
+        <div class="exec-l">Patients Treated</div>
+        <div class="exec-d">Across 4 service locations in urban and rural Quixad&aacute;</div>
+      </div>
+      <div class="exec-card" style="animation-delay:.2s;border-top-color:var(--green)">
+        <div class="exec-n" style="color:var(--green)">2,396</div>
+        <div class="exec-l">Procedures Performed</div>
+        <div class="exec-d">Periodontics, restorations, surgery, X-rays, and referrals</div>
+      </div>
+      <div class="exec-card" style="animation-delay:.3s;border-top-color:var(--yellow)">
+        <div class="exec-n" style="color:var(--yellow-dark)">5.1</div>
+        <div class="exec-l">Procedures Per Patient</div>
+        <div class="exec-d">Reflecting high unmet dental needs in underserved populations</div>
+      </div>
+      <div class="exec-card" style="animation-delay:.4s;border-top-color:var(--red)">
+        <div class="exec-n" style="color:var(--red)">4</div>
+        <div class="exec-l">Days of Service</div>
+        <div class="exec-d">2 days rural outreach + 2 days university campus</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ 2022 PROCEDURES CHART ═══════════════ -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="kicker">2022 Clinical Data</div>
+    <div class="prose" style="margin-bottom:20px">
+      <h2>Procedures Performed in 2022</h2>
+      <p>Treatment was organized into four clinical stations: Restorative Dentistry (ART technique and sealants), Periodontics (scaling, root planing, prophylaxis, fluoride), Diagnostic Imaging (periapical and bitewing X-rays via portable NOMAD), and Oral Surgery (extraction of compromised teeth). All care was supervised by licensed faculty.</p>
+    </div>
+
+    <div class="card" style="animation-delay:.1s;margin-bottom:24px">
+      <div class="card-header">
+        <h3>Total Procedures by Category &mdash; 2022</h3>
+        <span class="badge">2,396 Total</span>
+      </div>
+      <div class="card-body">
+        <div class="bar-list">
+          <div class="bar-item">
+            <div class="bar-label">Periodontics</div>
+            <div class="bar-track"><div class="bar-fill green" style="width:36.6%"><span class="bar-v">878 (36.6%)</span></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label">Restorations</div>
+            <div class="bar-track"><div class="bar-fill navy" style="width:27.5%"><span class="bar-v">660 (27.5%)</span></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label">Diagnostic X-Ray</div>
+            <div class="bar-track"><div class="bar-fill yellow" style="width:18.7%"><span class="bar-v">447 (18.7%)</span></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label">Oral Surgery</div>
+            <div class="bar-track"><div class="bar-fill red" style="width:13.2%"><span class="bar-v">316 (13.2%)</span></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label">Referrals</div>
+            <div class="bar-track"><div class="bar-fill silver" style="width:7%"><span class="bar-v" style="color:var(--primary)">95 (4.0%)</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PATIENT DISTRIBUTION SVG -->
+    <div class="card green-top" style="animation-delay:.2s;margin-bottom:24px">
+      <div class="card-header" style="background:var(--green-dark)">
+        <h3>Patient Distribution by Location &mdash; 2022</h3>
+        <span class="badge">474 Patients</span>
+      </div>
+      <div class="card-body">
+        <svg viewBox="0 0 700 175" xmlns="http://www.w3.org/2000/svg" style="max-width:700px">
+          <rect x="10" y="10" width="163" height="120" rx="8" fill="#002868" opacity=".92"/>
+          <text x="91" y="50" text-anchor="middle" fill="#FFDF00" font-family="Montserrat" font-weight="800" font-size="34">124</text>
+          <text x="91" y="68" text-anchor="middle" fill="rgba(255,255,255,.55)" font-family="Montserrat" font-weight="700" font-size="9" letter-spacing="1">26.2%</text>
+          <text x="91" y="92" text-anchor="middle" fill="#fff" font-family="Montserrat" font-weight="600" font-size="10">Res. Raquel de Queiroz</text>
+          <text x="91" y="108" text-anchor="middle" fill="rgba(255,255,255,.5)" font-family="Source Sans 3" font-weight="400" font-size="9">Aug 16 &middot; Rural</text>
+
+          <rect x="183" y="10" width="163" height="120" rx="8" fill="#009C3B" opacity=".92"/>
+          <text x="264" y="50" text-anchor="middle" fill="#fff" font-family="Montserrat" font-weight="800" font-size="34">98</text>
+          <text x="264" y="68" text-anchor="middle" fill="rgba(255,255,255,.55)" font-family="Montserrat" font-weight="700" font-size="9" letter-spacing="1">20.7%</text>
+          <text x="264" y="92" text-anchor="middle" fill="#fff" font-family="Montserrat" font-weight="600" font-size="10">Complexo Odontol&oacute;gico I</text>
+          <text x="264" y="108" text-anchor="middle" fill="rgba(255,255,255,.5)" font-family="Source Sans 3" font-weight="400" font-size="9">Aug 17 &middot; Campus</text>
+
+          <rect x="356" y="10" width="163" height="120" rx="8" fill="#BF0A30" opacity=".92"/>
+          <text x="437" y="50" text-anchor="middle" fill="#fff" font-family="Montserrat" font-weight="800" font-size="34">139</text>
+          <text x="437" y="68" text-anchor="middle" fill="rgba(255,255,255,.55)" font-family="Montserrat" font-weight="700" font-size="9" letter-spacing="1">29.3%</text>
+          <text x="437" y="92" text-anchor="middle" fill="#fff" font-family="Montserrat" font-weight="600" font-size="10">Complexo Odontol&oacute;gico II</text>
+          <text x="437" y="108" text-anchor="middle" fill="rgba(255,255,255,.5)" font-family="Source Sans 3" font-weight="400" font-size="9">Aug 18 &middot; Campus</text>
+
+          <rect x="529" y="10" width="163" height="120" rx="8" fill="#FFDF00"/>
+          <text x="610" y="50" text-anchor="middle" fill="#001a42" font-family="Montserrat" font-weight="800" font-size="34">113</text>
+          <text x="610" y="68" text-anchor="middle" fill="rgba(0,26,66,.45)" font-family="Montserrat" font-weight="700" font-size="9" letter-spacing="1">23.8%</text>
+          <text x="610" y="92" text-anchor="middle" fill="#001a42" font-family="Montserrat" font-weight="600" font-size="10">Escola S&atilde;o Jo&atilde;o Q.</text>
+          <text x="610" y="108" text-anchor="middle" fill="rgba(0,26,66,.4)" font-family="Source Sans 3" font-weight="400" font-size="9">Aug 19 &middot; Rural</text>
+
+          <rect x="10" y="148" width="10" height="10" rx="2" fill="#002868"/>
+          <text x="26" y="157" fill="#3a3a4a" font-family="Source Sans 3" font-weight="400" font-size="10">Rural outreach</text>
+          <rect x="130" y="148" width="10" height="10" rx="2" fill="#009C3B"/>
+          <text x="146" y="157" fill="#3a3a4a" font-family="Source Sans 3" font-weight="400" font-size="10">University campus</text>
+          <text x="300" y="157" fill="#A5ACAF" font-family="Source Sans 3" font-weight="400" font-size="10">2 days rural + 2 days campus = balanced approach</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- PROCEDURE TABLE -->
+    <div class="card" style="animation-delay:.3s;margin-bottom:24px">
+      <div class="card-header">
+        <h3>Complete Procedure Summary &mdash; 2022</h3>
+        <span class="badge">SPSS Verified</span>
+      </div>
+      <div class="card-body" style="padding:0;overflow-x:auto">
+        <table class="ptable">
+          <thead><tr><th>Procedure</th><th>Description</th><th>Count</th></tr></thead>
+          <tbody>
+            <tr><td>Periodontics</td><td>Scaling, root planing, prophylaxis, fluoride (per sextant)</td><td>878</td></tr>
+            <tr><td>Restorations</td><td>Atraumatic Restorative Treatment, sealants (per tooth)</td><td>660</td></tr>
+            <tr><td>Diagnostic X-Ray</td><td>Periapical and bitewing radiographs via portable NOMAD (per tooth)</td><td>447</td></tr>
+            <tr><td>Oral Surgery</td><td>Extraction of compromised or unsalvageable teeth (per tooth)</td><td>316</td></tr>
+            <tr><td>Referrals</td><td>Patients referred for treatment beyond field capacity</td><td>95</td></tr>
+          </tbody>
+          <tfoot><tr><td colspan="2">TOTAL PROCEDURES</td><td>2,396</td></tr></tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ 2022 DAY-BY-DAY ═══════════════ -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="kicker">2022 Day-by-Day Breakdown</div>
+    <div class="prose" style="margin-bottom:28px">
+      <h2>Four Days of Impact</h2>
+      <p>The 2022 mission alternated between rural outreach (Days 1 and 4) and campus-based care at Unicat&oacute;lica&rsquo;s dental complex (Days 2 and 3). Rural outreach was conducted in school buildings using portable equipment &mdash; portable dental chairs, school desks as workstations, and flashlights for illumination.</p>
+    </div>
+
+    <div class="day-grid">
+      <div class="day-card" style="animation-delay:.1s">
+        <div class="day-top" style="background:var(--green-dark)">
+          <div class="day-num">Day 01</div>
+          <div class="day-loc">Res. Raquel de Queiroz</div>
+          <div class="day-date">August 16, 2022 &middot; Rural Community</div>
+        </div>
+        <div class="day-body">
+          <div class="day-row"><span class="day-rn">Patients</span><span class="day-rv">124</span></div>
+          <div class="day-row"><span class="day-rn">Periodontics</span><span class="day-rv">187</span></div>
+          <div class="day-row"><span class="day-rn">Restorations</span><span class="day-rv">211</span></div>
+          <div class="day-row"><span class="day-rn">Oral Surgery</span><span class="day-rv">72</span></div>
+          <div class="day-row"><span class="day-rn">Referrals</span><span class="day-rv" style="color:var(--red)">138</span></div>
+          <div class="day-row"><span class="day-rn">X-Rays</span><span class="day-rv">21</span></div>
+        </div>
+        <div class="day-total"><span class="day-tl">Total Procedures</span><span class="day-tv">629</span></div>
+      </div>
+
+      <div class="day-card" style="animation-delay:.2s">
+        <div class="day-top" style="background:var(--primary)">
+          <div class="day-num">Day 02</div>
+          <div class="day-loc">Complexo Odontol&oacute;gico</div>
+          <div class="day-date">August 17, 2022 &middot; University Campus</div>
+        </div>
+        <div class="day-body">
+          <div class="day-row"><span class="day-rn">Patients</span><span class="day-rv">98</span></div>
+          <div class="day-row"><span class="day-rn">Periodontics</span><span class="day-rv">218</span></div>
+          <div class="day-row"><span class="day-rn">Restorations</span><span class="day-rv">121</span></div>
+          <div class="day-row"><span class="day-rn">Oral Surgery</span><span class="day-rv">57</span></div>
+          <div class="day-row"><span class="day-rn">Referrals</span><span class="day-rv">28</span></div>
+          <div class="day-row"><span class="day-rn">X-Rays</span><span class="day-rv">87</span></div>
+        </div>
+        <div class="day-total"><span class="day-tl">Total Procedures</span><span class="day-tv">511</span></div>
+      </div>
+
+      <div class="day-card" style="animation-delay:.3s">
+        <div class="day-top" style="background:var(--primary-mid)">
+          <div class="day-num">Day 03</div>
+          <div class="day-loc">Complexo Odontol&oacute;gico</div>
+          <div class="day-date">August 18, 2022 &middot; University Campus</div>
+        </div>
+        <div class="day-body">
+          <div class="day-row"><span class="day-rn">Patients</span><span class="day-rv">139</span></div>
+          <div class="day-row"><span class="day-rn">Periodontics</span><span class="day-rv">226</span></div>
+          <div class="day-row"><span class="day-rn">Restorations</span><span class="day-rv">167</span></div>
+          <div class="day-row"><span class="day-rn">Oral Surgery</span><span class="day-rv">99</span></div>
+          <div class="day-row"><span class="day-rn">Referrals</span><span class="day-rv">35</span></div>
+          <div class="day-row"><span class="day-rn">X-Rays</span><span class="day-rv">121</span></div>
+        </div>
+        <div class="day-total"><span class="day-tl">Total Procedures</span><span class="day-tv">648</span></div>
+      </div>
+
+      <div class="day-card" style="animation-delay:.4s">
+        <div class="day-top" style="background:var(--red)">
+          <div class="day-num">Day 04</div>
+          <div class="day-loc">Escola S&atilde;o Jo&atilde;o dos Queiroz</div>
+          <div class="day-date">August 19, 2022 &middot; Rural District</div>
+        </div>
+        <div class="day-body">
+          <div class="day-row"><span class="day-rn">Patients</span><span class="day-rv">113</span></div>
+          <div class="day-row"><span class="day-rn">Periodontics</span><span class="day-rv">247</span></div>
+          <div class="day-row"><span class="day-rn">Restorations</span><span class="day-rv">161</span></div>
+          <div class="day-row"><span class="day-rn">Oral Surgery</span><span class="day-rv">88</span></div>
+          <div class="day-row"><span class="day-rn">Referrals</span><span class="day-rv">11</span></div>
+          <div class="day-row"><span class="day-rn">X-Rays</span><span class="day-rv">101</span></div>
+        </div>
+        <div class="day-total"><span class="day-tl">Total Procedures</span><span class="day-tv">608</span></div>
+      </div>
+    </div>
+
+    <!-- STACKED BAR CHART -->
+    <div class="card" style="margin-top:28px;animation-delay:.2s">
+      <div class="card-header">
+        <h3>Procedure Mix by Day &mdash; 2022 Comparison</h3>
+        <span class="badge">Percentage</span>
+      </div>
+      <div class="card-body">
+        <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" style="max-width:700px">
+          <rect x="10" y="5" width="12" height="12" rx="2" fill="#009C3B"/>
+          <text x="28" y="15" fill="#3a3a4a" font-family="Source Sans 3" font-weight="500" font-size="10">Periodontics</text>
+          <rect x="120" y="5" width="12" height="12" rx="2" fill="#002868"/>
+          <text x="138" y="15" fill="#3a3a4a" font-family="Source Sans 3" font-weight="500" font-size="10">Restorations</text>
+          <rect x="230" y="5" width="12" height="12" rx="2" fill="#BF0A30"/>
+          <text x="248" y="15" fill="#3a3a4a" font-family="Source Sans 3" font-weight="500" font-size="10">Oral Surgery</text>
+          <rect x="345" y="5" width="12" height="12" rx="2" fill="#FFDF00"/>
+          <text x="363" y="15" fill="#3a3a4a" font-family="Source Sans 3" font-weight="500" font-size="10">X-Ray</text>
+          <rect x="420" y="5" width="12" height="12" rx="2" fill="#A5ACAF"/>
+          <text x="438" y="15" fill="#3a3a4a" font-family="Source Sans 3" font-weight="500" font-size="10">Referrals</text>
+
+          <text x="5" y="65" fill="#002868" font-family="Montserrat" font-weight="700" font-size="11">Day 1</text>
+          <text x="5" y="80" fill="#A5ACAF" font-family="Source Sans 3" font-weight="400" font-size="9">Raquel de Q.</text>
+          <text x="5" y="125" fill="#002868" font-family="Montserrat" font-weight="700" font-size="11">Day 2</text>
+          <text x="5" y="140" fill="#A5ACAF" font-family="Source Sans 3" font-weight="400" font-size="9">Complexo I</text>
+          <text x="5" y="185" fill="#002868" font-family="Montserrat" font-weight="700" font-size="11">Day 3</text>
+          <text x="5" y="200" fill="#A5ACAF" font-family="Source Sans 3" font-weight="400" font-size="9">Complexo II</text>
+          <text x="5" y="245" fill="#002868" font-family="Montserrat" font-weight="700" font-size="11">Day 4</text>
+          <text x="5" y="260" fill="#A5ACAF" font-family="Source Sans 3" font-weight="400" font-size="9">S. Jo&atilde;o Q.</text>
+
+          <!-- Day 1: 29.7 / 33.5 / 11.4 / 3.3 / 21.9 -->
+          <g transform="translate(140,50)">
+            <rect x="0" y="0" width="156" height="36" rx="4" fill="#009C3B"/><rect x="156" y="0" width="176" height="36" fill="#002868"/><rect x="332" y="0" width="60" height="36" fill="#BF0A30"/><rect x="392" y="0" width="17" height="36" fill="#FFDF00"/><rect x="409" y="0" width="115" height="36" fill="#A5ACAF"/><rect x="520" y="0" width="5" height="36" rx="4" fill="#A5ACAF"/>
+            <text x="78" y="23" text-anchor="middle" fill="#fff" font-family="Montserrat" font-weight="700" font-size="9">29.7%</text>
+            <text x="244" y="23" text-anchor="middle" fill="#fff" font-family="Montserrat" font-weight="700" font-size="9">33.5%</text>
+            <text x="362" y="23" text-anchor="middle" fill="#fff" font-family="Montserrat" font-weight="700" font-size="9">11.4%</text>
+            <text x="466" y="23" text-anchor="middle" fill="#fff" font-family="Montserrat" font-weight="700" font-size="9">21.9%</text>
+          </g>
+          <!-- Day 2: 42.7 / 23.7 / 11.2 / 17 / 5.5 -->
+          <g transform="translate(140,110)">
+            <rect x="0" y="0" width="224" height="36" rx="4" fill="#009C3B"/><rect x="224" y="0" width="124" height="36" fill="#002868"/><rect x="348" y="0" width="59" height="36" fill="#BF0A30"/><rect x="407" y="0" width="89" height="36" fill="#FFDF00"/><rect x="496" y="0" width="29" height="36" fill="#A5ACAF"/><rect x="521" y="0" width="4" height="36" rx="4" fill="#A5ACAF"/>
+            <text x="112" y="23" text-anchor="middle" fill="#fff" font-family="Montserrat" font-weight="700" font-size="9">42.7%</text>
+            <text x="286" y="23" text-anchor="middle" fill="#fff" font-family="Montserrat" font-weight="700" font-size="9">23.7%</text>
+            <text x="377" y="23" text-anchor="middle" fill="#fff" font-family="Montserrat" font-weight="700" font-size="9">11.2%</text>
+            <text x="451" y="23" text-anchor="middle" fill="#001a42" font-family="Montserrat" font-weight="700" font-size="9">17%</text>
+          </g>
+          <!-- Day 3: 34.9 / 25.8 / 15.3 / 18.7 / 5.4 -->
+          <g transform="translate(140,170)">
+            <rect x="0" y="0" width="183" height="36" rx="4" fill="#009C3B"/><rect x="183" y="0" width="135" height="36" fill="#002868"/><rect x="318" y="0" width="80" height="36" fill="#BF0A30"/><rect x="398" y="0" width="98" height="36" fill="#FFDF00"/><rect x="496" y="0" width="28" height="36" fill="#A5ACAF"/><rect x="520" y="0" width="5" height="36" rx="4" fill="#A5ACAF"/>
+            <text x="91" y="23" text-anchor="middle" fill="#fff" font-family="Montserrat" font-weight="700" font-size="9">34.9%</text>
+            <text x="250" y="23" text-anchor="middle" fill="#fff" font-family="Montserrat" font-weight="700" font-size="9">25.8%</text>
+            <text x="358" y="23" text-anchor="middle" fill="#fff" font-family="Montserrat" font-weight="700" font-size="9">15.3%</text>
+            <text x="447" y="23" text-anchor="middle" fill="#001a42" font-family="Montserrat" font-weight="700" font-size="9">18.7%</text>
+          </g>
+          <!-- Day 4: 40.6 / 26.5 / 14.5 / 16.6 / 1.8 -->
+          <g transform="translate(140,230)">
+            <rect x="0" y="0" width="213" height="36" rx="4" fill="#009C3B"/><rect x="213" y="0" width="139" height="36" fill="#002868"/><rect x="352" y="0" width="76" height="36" fill="#BF0A30"/><rect x="428" y="0" width="87" height="36" fill="#FFDF00"/><rect x="515" y="0" width="10" height="36" fill="#A5ACAF"/><rect x="521" y="0" width="4" height="36" rx="4" fill="#A5ACAF"/>
+            <text x="106" y="23" text-anchor="middle" fill="#fff" font-family="Montserrat" font-weight="700" font-size="9">40.6%</text>
+            <text x="282" y="23" text-anchor="middle" fill="#fff" font-family="Montserrat" font-weight="700" font-size="9">26.5%</text>
+            <text x="390" y="23" text-anchor="middle" fill="#fff" font-family="Montserrat" font-weight="700" font-size="9">14.5%</text>
+            <text x="471" y="23" text-anchor="middle" fill="#001a42" font-family="Montserrat" font-weight="700" font-size="9">16.6%</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="info-box green" style="margin-top:24px">
+      <div class="info-box-t">Key Clinical Insight From 2022</div>
+      <p><strong>Day 1 (Residencial Raquel de Queiroz)</strong> had an unusually high referral rate of 21.9% &mdash; nearly six times the mission average of 4.0%. This most remote location presented patients with significantly more advanced dental disease that exceeded field treatment capacity. By Day 4 (Escola S&atilde;o Jo&atilde;o dos Queiroz), the referral rate dropped to just 1.8%, suggesting greater field efficiency and more effective pre-screening. The dramatic X-ray increase from Day 1 (3.3%) to Days 2&ndash;4 (17%+) reflects the transition from rudimentary rural settings to the better-equipped campus where the NOMAD portable units could operate more effectively. These learnings will directly inform the 2027 mission&rsquo;s planning and resource allocation.</p>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider"><span class="d1"></span><span class="d2"></span><span class="d3"></span><span class="d4"></span></div></div>
+
+<!-- ═══════════════ 2022 PHOTO GALLERY ═══════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="kicker">2022 Mission in Pictures</div>
+    <div class="prose" style="margin-bottom:28px">
+      <h2>Photo Gallery &mdash; 2022 Brazil Mission Trip</h2>
+      <p>A visual record of the 2022 mission &mdash; clinical work in rural communities and campus settings, team interactions, cultural exchanges, and the patients whose lives were touched. These images document the model that the 2027 mission will replicate and expand.</p>
+    </div>
+
+    <div class="carousel" id="missionCarousel">
+      <div class="carousel-viewport">
+        <div class="carousel-slide active" data-index="0"><img src="IMG_7446.jpg" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">1 / 36</div></div></div>
+        <div class="carousel-slide" data-index="1"><img src="IMG_7087.jpg" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">2 / 36</div></div></div>
+        <div class="carousel-slide" data-index="2"><img src="IMG_7263.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">3 / 36</div></div></div>
+        <div class="carousel-slide" data-index="3"><img src="IMG_7346.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">4 / 36</div></div></div>
+        <div class="carousel-slide" data-index="4"><img src="IMG_7916.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">5 / 36</div></div></div>
+        <div class="carousel-slide" data-index="5"><img src="IMG_7863.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">6 / 36</div></div></div>
+        <div class="carousel-slide" data-index="6"><img src="IMG_7930.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">7 / 36</div></div></div>
+        <div class="carousel-slide" data-index="7"><img src="IMG_7399.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">8 / 36</div></div></div>
+        <div class="carousel-slide" data-index="8"><img src="IMG_7395.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">9 / 36</div></div></div>
+        <div class="carousel-slide" data-index="9"><img src="IMG_7353.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">10 / 36</div></div></div>
+        <div class="carousel-slide" data-index="10"><img src="IMG_8125.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">11 / 36</div></div></div>
+        <div class="carousel-slide" data-index="11"><img src="IMG_8139.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">12 / 36</div></div></div>
+        <div class="carousel-slide" data-index="12"><img src="IMG_8141.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">13 / 36</div></div></div>
+        <div class="carousel-slide" data-index="13"><img src="IMG_7857.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">14 / 36</div></div></div>
+        <div class="carousel-slide" data-index="14"><img src="IMG_7859.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">15 / 36</div></div></div>
+        <div class="carousel-slide" data-index="15"><img src="IMG_8132.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">16 / 36</div></div></div>
+        <div class="carousel-slide" data-index="16"><img src="IMG_7855.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">17 / 36</div></div></div>
+        <div class="carousel-slide" data-index="17"><img src="IMG_8145.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">18 / 36</div></div></div>
+        <div class="carousel-slide" data-index="18"><img src="IMG_8065.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">19 / 36</div></div></div>
+        <div class="carousel-slide" data-index="19"><img src="IMG_7294.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">20 / 36</div></div></div>
+        <div class="carousel-slide" data-index="20"><img src="IMG_7960.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">21 / 36</div></div></div>
+        <div class="carousel-slide" data-index="21"><img src="IMG_8023.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">22 / 36</div></div></div>
+        <div class="carousel-slide" data-index="22"><img src="IMG_8020.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">23 / 36</div></div></div>
+        <div class="carousel-slide" data-index="23"><img src="IMG_7982.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">24 / 36</div></div></div>
+        <div class="carousel-slide" data-index="24"><img src="IMG_8035.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">25 / 36</div></div></div>
+        <div class="carousel-slide" data-index="25"><img src="IMG_7906.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">26 / 36</div></div></div>
+        <div class="carousel-slide" data-index="26"><img src="IMG_7932.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">27 / 36</div></div></div>
+        <div class="carousel-slide" data-index="27"><img src="IMG_8093.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">28 / 36</div></div></div>
+        <div class="carousel-slide" data-index="28"><img src="IMG_7958.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">29 / 36</div></div></div>
+        <div class="carousel-slide" data-index="29"><img src="IMG_7934.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">30 / 36</div></div></div>
+        <div class="carousel-slide" data-index="30"><img src="IMG_8026.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">31 / 36</div></div></div>
+        <div class="carousel-slide" data-index="31"><img src="IMG_8031.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">32 / 36</div></div></div>
+        <div class="carousel-slide" data-index="32"><img src="IMG_7252.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">33 / 36</div></div></div>
+        <div class="carousel-slide" data-index="33"><img src="IMG_7944.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">34 / 36</div></div></div>
+        <div class="carousel-slide" data-index="34"><img src="IMG_8014.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">35 / 36</div></div></div>
+        <div class="carousel-slide" data-index="35"><img src="IMG_7990.JPG" alt="Brazil Mission Trip 2022"><div class="carousel-caption"><div class="carousel-caption-title">Brazil Mission Trip 2022</div><div class="carousel-caption-sub">36 / 36</div></div></div>
+        <span class="carousel-counter" id="missionCounter">1 / 36</span>
+      </div>
+      <button class="carousel-btn prev" onclick="navCarousel('mission',-1)" aria-label="Previous">&lsaquo;</button>
+      <button class="carousel-btn next" onclick="navCarousel('mission',1)" aria-label="Next">&rsaquo;</button>
+      <div class="carousel-dots" id="missionDots" style="gap:5px"></div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider"><span class="d2"></span><span class="d1"></span><span class="d4"></span><span class="d3"></span></div></div>
+
+<!-- ═══════════════ CLOSING / CTA ═══════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="kicker">Looking Forward</div>
+    <div class="prose" style="margin-bottom:28px">
+      <h2>Join the 2027 Mission</h2>
+      <p>The 2022 Brazil Mission Trip proved that a small, well-organized team can deliver transformative dental care to hundreds of patients in just days &mdash; working on school desks with flashlights, using portable equipment carried across continents. That mission treated 474 patients, performed 2,396 procedures, and was published in a peer-reviewed journal. Now we have the opportunity to build on that foundation.</p>
+      <p>The <strong>2027 Brazil Mission Trip</strong> from Augusta University represents the next chapter of this partnership &mdash; bringing more students, more resources, and refined logistics to the communities of Quixad&aacute; who need it most. With strong institutional backing, a favorable exchange rate making the mission remarkably affordable, and a proven operational model, we are positioned to deliver even greater impact.</p>
+      <p>Whether you are a <strong>student</strong> looking to gain invaluable clinical and cultural experience, a <strong>faculty member</strong> committed to service-learning, or a <strong>sponsor</strong> seeking a high-impact, well-documented partnership &mdash; there is a place for you in this mission.</p>
+    </div>
+
+    <div style="background:var(--primary);border-radius:10px;padding:36px;text-align:center;color:#fff;position:relative;overflow:hidden">
+      <div style="position:absolute;top:0;left:0;right:0;height:4px;display:flex">
+        <span style="flex:1;background:var(--green)"></span>
+        <span style="flex:1;background:var(--yellow)"></span>
+        <span style="flex:1;background:var(--red)"></span>
+      </div>
+      <div style="font-family:Montserrat;font-weight:700;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:var(--yellow);margin-bottom:14px">Connecting Two Nations Through Service</div>
+      <div style="font-family:Montserrat;font-weight:700;font-size:24px;letter-spacing:-.3px;margin-bottom:8px">🇺🇸 Augusta &harr; Quixad&aacute; 🇧🇷</div>
+      <div style="font-family:'Source Sans 3';font-weight:300;font-size:15px;color:rgba(255,255,255,.65)">Augusta University &middot; Dental College of Georgia</div>
+      <div style="font-family:'Source Sans 3';font-weight:300;font-size:14px;color:rgba(255,255,255,.65)">Centro Universit&aacute;rio Cat&oacute;lica de Quixad&aacute;</div>
+      <div style="font-family:'Source Sans 3';font-weight:300;font-size:12px;color:rgba(255,255,255,.4);margin-top:8px">Pierre Fauchard Academy &middot; GDA &middot; Hinman &middot; 3M &middot; Ivoclar &middot; NOMAD</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="report-footer">
+  <p class="fb">Brazil Mission Trip 2027 &mdash; Proposal &amp; Impact Report</p>
+  <p>Augusta University &middot; Dental College of Georgia &middot; Augusta, GA 30912</p>
+  <p>2022 mission data verified via SPSS Statistics 28.0.1</p>
+  <p>Published: Rev. Expr. Cat&oacute;l.; v. 11, n. especial; Nov 2022; ISSN: 2357-8483</p>
+  <p style="margin-top:12px;font-size:11px">Rafael Rocha Pacheco &middot; Cosmo Helder Ferreira Silva &middot; Sofia Vasconcelos Carneiro</p>
+  <p style="font-size:11px">V&aacute;gner Herton Silva Di&oacute;genes J&uacute;nior &middot; Gabriela de Alencar Pinto Magalh&atilde;es</p>
+</footer>
+
+<script>
+/* ═══════ BILINGUAL TRANSLATION ENGINE ═══════ */
+var T={
+'.planning-badge':[{pt:'Proposta de Miss\u00e3o 2027'}],
+'.hero h1':[{pt:'Viagem Mission\u00e1ria ao <span class="y">Brasil</span> <span class="g">2027</span>'}],
+'.hero-sub':[{pt:'Uma miss\u00e3o odontol\u00f3gica humanit\u00e1ria conectando a Augusta University e o Centro Universit\u00e1rio Cat\u00f3lica de Quixad\u00e1 \u2014 levando sa\u00fade bucal a comunidades carentes no Sert\u00e3o brasileiro. Ver\u00e3o 2027, 14 de junho a 5 de julho. Baseado em uma parceria comprovada em 2022.'}],
+'.hero-stat-l':[{pt:'Membros da Equipe'},{pt:'Dias de Atendimento'},{pt:'C\u00e2mbio USD/BRL'},{pt:'Na\u00e7\u00f5es Unidas'}],
+'.kicker':[
+{pt:'Vis\u00e3o Geral da Miss\u00e3o'},
+{pt:'O Cen\u00e1rio'},
+{pt:'A Terra dos Contrastes'},
+{pt:'Or\u00e7amento e Log\u00edstica'},
+{pt:'Patrocinadores e Parceiros'},
+{pt:'Resultados da Miss\u00e3o 2022'},
+{pt:'Dados Cl\u00ednicos 2022'},
+{pt:'Detalhamento Di\u00e1rio 2022'},
+{pt:'Miss\u00e3o 2022 em Imagens'},
+{pt:'Olhando para o Futuro'}
+],
+'.prose h2':[
+{pt:'O Que Estamos Planejando'},
+{pt:'Quixad\u00e1, Cear\u00e1 \u2014 O Cora\u00e7\u00e3o do Sert\u00e3o'},
+{pt:'Impacto Acess\u00edvel \u2014 A Vantagem Cambial'},
+{pt:'Construindo uma Coaliz\u00e3o de Apoio'},
+{pt:'Resumo Executivo \u2014 Dados da Miss\u00e3o 2022'},
+{pt:'Procedimentos Realizados em 2022'},
+{pt:'Quatro Dias de Impacto'},
+{pt:'Galeria de Fotos \u2014 Viagem Mission\u00e1ria ao Brasil 2022'},
+{pt:'Junte-se \u00e0 Miss\u00e3o 2027'}
+],
+'.prose p':[
+{pt:'A <strong>Viagem Mission\u00e1ria ao Brasil 2027</strong> levar\u00e1 uma equipe de aproximadamente <strong>10 estudantes de odontologia, 5 professores e uma higienista dental</strong> da Augusta University para <strong>Quixad\u00e1, Cear\u00e1, Brasil</strong>, em uma miss\u00e3o humanit\u00e1ria de atendimento odontol\u00f3gico. Em parceria novamente com o <strong>Centro Universit\u00e1rio Cat\u00f3lica de Quixad\u00e1 (Unicat\u00f3lica)</strong>, a equipe fornecer\u00e1 atendimento abrangente \u2014 restaura\u00e7\u00f5es, periodontia, cirurgia oral, diagn\u00f3stico por imagem e educa\u00e7\u00e3o em sa\u00fade bucal \u2014 a comunidades carentes na regi\u00e3o semi\u00e1rida do Sert\u00e3o.'},
+{pt:'Esta miss\u00e3o se baseia no extraordin\u00e1rio sucesso da <strong>Viagem Mission\u00e1ria ao Brasil 2022</strong>, organizada entre a University of Detroit Mercy e a Unicat\u00f3lica. Aquela miss\u00e3o atendeu <strong>474 pacientes</strong> e realizou <strong>2.396 procedimentos</strong> em apenas quatro dias \u2014 estabelecendo um modelo comprovado que a miss\u00e3o de 2027 ir\u00e1 aproveitar e expandir. Os dados completos est\u00e3o documentados adiante neste relat\u00f3rio.'},
+{pt:'<strong>Quixad\u00e1</strong> (do Tupi ind\u00edgena, significando \u201ccurral de pedras\u201d) \u00e9 um munic\u00edpio de aproximadamente 87.000 habitantes localizado no <strong>Sert\u00e3o Central</strong> \u2014 o interior semi\u00e1rido do estado do Cear\u00e1, a cerca de 170 km da capital Fortaleza. Conhecida como a \u201cTerra dos Monolitos\u201d por suas forma\u00e7\u00f5es rochosas, incluindo a ic\u00f4nica <strong>Pedra da Galinha Choca</strong>, Quixad\u00e1 est\u00e1 em uma das regi\u00f5es mais \u00e1ridas do Brasil, onde o <strong>bioma Caatinga</strong> domina.'},
+{pt:'O Sert\u00e3o tem sido historicamente uma das regi\u00f5es mais desfavorecidas do Brasil. Chuvas irregulares, solo pobre e infraestrutura limitada perpetuam ciclos de pobreza \u2014 principalmente nos <strong>distritos rurais</strong> ao redor de Quixad\u00e1. Muitos moradores <strong>nunca viram um dentista</strong>, resultando em doen\u00e7as dent\u00e1rias graves, infec\u00e7\u00f5es e perda dent\u00e1ria que impactam nutri\u00e7\u00e3o, participa\u00e7\u00e3o social e qualidade de vida.'},
+{pt:'Um dos aspectos mais convincentes desta miss\u00e3o \u00e9 sua <strong>extraordin\u00e1ria rela\u00e7\u00e3o custo-benef\u00edcio</strong>. A taxa de c\u00e2mbio atual de aproximadamente <strong>1 USD = 5,0 BRL</strong> significa que despesas locais no Brasil s\u00e3o extremamente acess\u00edveis. Um hotel de qualidade em Quixad\u00e1 custa R$120\u2013180/noite (~$24\u201336 USD), e uma refei\u00e7\u00e3o completa R$20\u201340 (~$4\u20138 USD).'},
+{pt:'O custo principal para cada estudante \u00e9 a <strong>passagem a\u00e9rea internacional</strong>, estimada em ~<strong>$1.000 USD</strong> ida e volta. <strong>Todo o transporte terrestre no Brasil \u00e9 fornecido sem custo</strong> \u2014 \u00f4nibus fretado, <strong>escolta policial e apoio de ambul\u00e2ncias</strong> acompanhar\u00e3o a equipe. Com patroc\u00ednio corporativo cobrindo materiais e equipamentos, o custo por estudante \u00e9 extremamente acess\u00edvel.'},
+{pt:'O sucesso da miss\u00e3o de 2027 depende de parcerias com institui\u00e7\u00f5es acad\u00eamicas, organiza\u00e7\u00f5es profissionais e patrocinadores corporativos. As organiza\u00e7\u00f5es abaixo representam nossa coaliz\u00e3o-alvo \u2014 combinando credibilidade, suporte material, acesso a equipamentos e patroc\u00ednio financeiro.'},
+{pt:'Em agosto de 2022, estudantes e professores da <strong>University of Detroit Mercy</strong> viajaram a Quixad\u00e1, em parceria com a Unicat\u00f3lica. Em quatro dias, atenderam <strong>474 pacientes</strong> e realizaram <strong>2.396 procedimentos</strong>. A miss\u00e3o contou com apoio da <strong>3M</strong>, uma <strong>unidade port\u00e1til NOMAD Pro 2</strong>, e a <strong>Alpha Omega International Dental Society</strong>. Publicado na <strong>Revista Express\u00e3o Cat\u00f3lica</strong> (v. 11, ed. especial, nov. 2022, ISSN: 2357-8483).'},
+{pt:'O tratamento foi organizado em quatro esta\u00e7\u00f5es: Odontologia Restauradora (ART e selantes), Periodontia (raspagem, profilaxia, fl\u00faor), Diagn\u00f3stico por Imagem (radiografias via NOMAD port\u00e1til) e Cirurgia Oral (extra\u00e7\u00f5es). Todo o atendimento foi supervisionado por professores licenciados de ambas as institui\u00e7\u00f5es.'},
+{pt:'A miss\u00e3o de 2022 alternou entre atendimento rural (Dias 1 e 4) e atendimento no campus (Dias 2 e 3). O atendimento rural foi realizado em pr\u00e9dios escolares usando equipamentos port\u00e1teis \u2014 cadeiras port\u00e1teis, carteiras como esta\u00e7\u00f5es de trabalho e lanternas para ilumina\u00e7\u00e3o.'},
+{pt:'Um registro visual da miss\u00e3o de 2022 \u2014 trabalho cl\u00ednico, intera\u00e7\u00f5es da equipe, interc\u00e2mbio cultural e os pacientes cujas vidas foram tocadas. Estas imagens documentam o modelo que a miss\u00e3o de 2027 ir\u00e1 replicar e expandir.'},
+{pt:'A miss\u00e3o de 2022 provou que uma equipe pequena e bem organizada pode prestar atendimento transformador a centenas de pacientes em poucos dias \u2014 trabalhando em carteiras escolares com lanternas, usando equipamentos port\u00e1teis trazidos de outro continente. Atendeu 474 pacientes, realizou 2.396 procedimentos e foi publicada em revista cient\u00edfica.'},
+{pt:'A <strong>Viagem Mission\u00e1ria ao Brasil 2027</strong> da Augusta University representa o pr\u00f3ximo cap\u00edtulo desta parceria \u2014 levando mais estudantes, mais recursos e log\u00edstica aprimorada \u00e0s comunidades de Quixad\u00e1 que mais precisam. Com forte apoio institucional, c\u00e2mbio favor\u00e1vel e modelo operacional comprovado, estamos posicionados para gerar impacto ainda maior.'},
+{pt:'Seja voc\u00ea um <strong>estudante</strong> buscando experi\u00eancia cl\u00ednica e cultural inestim\u00e1vel, um <strong>professor</strong> comprometido com aprendizado por servi\u00e7o, ou um <strong>patrocinador</strong> buscando parceria de alto impacto \u2014 h\u00e1 um lugar para voc\u00ea nesta miss\u00e3o.'}
+],
+'.callout h3':[{pt:'Por Que Estas Comunidades S\u00e3o Carentes'}],
+'.callout p':[{pt:'A regi\u00e3o do <span class="hl">Sert\u00e3o</span> brasileiro enfrenta desafios que tornam a presta\u00e7\u00e3o de sa\u00fade extremamente dif\u00edcil. O clima semi\u00e1rido produz secas cr\u00f4nicas que podem durar anos. Embora o SUS forne\u00e7a cobertura m\u00e9dica b\u00e1sica, o <span class="hl">atendimento odontol\u00f3gico permanece criticamente escasso</span> no Cear\u00e1 rural. O especialista mais pr\u00f3ximo pode estar a horas de dist\u00e2ncia. A precipita\u00e7\u00e3o m\u00e9dia \u00e9 de apenas 400\u2013700mm, e as temperaturas ultrapassam 35\u00b0C. O bioma Caatinga \u2014 exclusivo do Brasil \u2014 define a paisagem.'}],
+'.info-box-t':[
+{pt:'Composi\u00e7\u00e3o Proposta da Equipe'},
+{pt:'Per\u00edodo Confirmado \u2014 F\u00e9rias de Ver\u00e3o 2027'},
+{pt:'Sobre o Estado do Cear\u00e1'},
+{pt:'O Contraste: Litoral vs. Interior'},
+{pt:'O Que Isso Significa'},
+{pt:'Log\u00edstica Local \u2014 Fornecida Sem Custo'},
+{pt:'Oportunidades Adicionais de Patroc\u00ednio'},
+{pt:'Dado Cl\u00ednico Importante de 2022'}
+],
+'.card-header h3':[
+{pt:'Custo Estimado por Estudante'},
+{pt:'Contexto Cambial'},
+{pt:'Total de Procedimentos por Categoria \u2014 2022'},
+{pt:'Distribui\u00e7\u00e3o de Pacientes por Local \u2014 2022'},
+{pt:'Resumo Completo de Procedimentos \u2014 2022'},
+{pt:'Composi\u00e7\u00e3o por Dia \u2014 Compara\u00e7\u00e3o 2022'}
+],
+'.exec-l':[{pt:'Pacientes Atendidos'},{pt:'Procedimentos Realizados'},{pt:'Procedimentos/Paciente'},{pt:'Dias de Atendimento'}],
+'.exec-d':[{pt:'Em 4 locais urbanos e rurais em Quixad\u00e1'},{pt:'Periodontia, restaura\u00e7\u00f5es, cirurgia, raio-X e encaminhamentos'},{pt:'Refletindo a alta necessidade odontol\u00f3gica n\u00e3o atendida'},{pt:'2 dias rurais + 2 dias no campus universit\u00e1rio'}],
+'.bar-label':[{pt:'Periodontia'},{pt:'Restaura\u00e7\u00f5es'},{pt:'Raio-X Diagn\u00f3stico'},{pt:'Cirurgia Oral'},{pt:'Encaminhamentos'}],
+'.ptable thead th':[{pt:'Procedimento'},{pt:'Descri\u00e7\u00e3o'},{pt:'Quantidade'}],
+'.day-num':[{pt:'Dia 01'},{pt:'Dia 02'},{pt:'Dia 03'},{pt:'Dia 04'}],
+'.day-rn':[
+{pt:'Pacientes'},{pt:'Periodontia'},{pt:'Restaura\u00e7\u00f5es'},{pt:'Cirurgia Oral'},{pt:'Encaminhamentos'},{pt:'Raio-X'},
+{pt:'Pacientes'},{pt:'Periodontia'},{pt:'Restaura\u00e7\u00f5es'},{pt:'Cirurgia Oral'},{pt:'Encaminhamentos'},{pt:'Raio-X'},
+{pt:'Pacientes'},{pt:'Periodontia'},{pt:'Restaura\u00e7\u00f5es'},{pt:'Cirurgia Oral'},{pt:'Encaminhamentos'},{pt:'Raio-X'},
+{pt:'Pacientes'},{pt:'Periodontia'},{pt:'Restaura\u00e7\u00f5es'},{pt:'Cirurgia Oral'},{pt:'Encaminhamentos'},{pt:'Raio-X'}
+],
+'.day-tl':[{pt:'Total de Procedimentos'},{pt:'Total de Procedimentos'},{pt:'Total de Procedimentos'},{pt:'Total de Procedimentos'}],
+'.budget-item':[{pt:'Passagem a\u00e9rea ida e volta'},{pt:'Hospedagem (5\u20137 noites)'},{pt:'Refei\u00e7\u00f5es (5\u20137 dias)'},{pt:'Transporte terrestre'},{pt:'Total Estimado por Estudante'}],
+'.budget-note':[{pt:'Augusta \u2192 Fortaleza (via conex\u00e3o)'},{pt:'Hotel em Quixad\u00e1 a ~$30/noite'},{pt:'3 refei\u00e7\u00f5es/dia a ~$5\u20138 cada'},{pt:'\u00d4nibus fretado + escolta policial fornecidos'}],
+'.section-header-2022 h2':[{pt:'\uD83C\uDDFA\uD83C\uDDF8 Viagem Mission\u00e1ria ao Brasil 2022 \uD83C\uDDE7\uD83C\uDDF7'}],
+'.section-header-2022 p':[{pt:'Em agosto de 2022, uma parceria entre a University of Detroit Mercy e a Unicat\u00f3lica prestou quatro dias de atendimento odontol\u00f3gico abrangente. Os dados abaixo demonstram o modelo, alcance e impacto cl\u00ednico comprovados.'}],
+'.ceara-card h4':[{pt:'Fortaleza'},{pt:'Beach Park'},{pt:'Jericoacoara'},{pt:'Quixad\u00e1'}],
+'.ceara-card p':[
+{pt:'Capital do Cear\u00e1 e 5\u00aa maior cidade do Brasil. Portal para o litoral famoso. Sede do Aeroporto Pinto Martins, onde a equipe de Augusta chegar\u00e1.'},
+{pt:'O maior parque aqu\u00e1tico da Am\u00e9rica Latina, em Porto das Dunas, ao sul de Fortaleza. S\u00edmbolo da economia tur\u00edstica litor\u00e2nea que contrasta com o interior.'},
+{pt:'Destino mundialmente famoso (\u201cJeri\u201d) no litoral oeste do Cear\u00e1. Parque nacional com dunas e lagoas cristalinas que atraem visitantes do mundo inteiro.'},
+{pt:'Conhecida como a \u201cTerra dos Monolitos\u201d. Apesar da beleza natural, a pobreza persiste no interior. Os 28 milh\u00f5es de habitantes do Sert\u00e3o enfrentam inseguran\u00e7a h\u00eddrica cr\u00f4nica.'}
+],
+'.report-footer .fb':[{pt:'Viagem Mission\u00e1ria ao Brasil 2027 \u2014 Proposta e Relat\u00f3rio de Impacto'}]
+};
+
+function setLang(lang){
+  document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===lang);});
+  for(var sel in T){var els=document.querySelectorAll(sel);var items=T[sel];
+    for(var i=0;i<items.length&&i<els.length;i++){var el=els[i];
+      if(!el.getAttribute('data-en'))el.setAttribute('data-en',el.innerHTML);
+      el.innerHTML=lang==='pt'?items[i].pt:el.getAttribute('data-en');
+  }}
+  document.documentElement.lang=lang;
+}
+
+/* ═══════ CAROUSEL ENGINE ═══════ */
+var carousels={};
+function initC(id,cid,did,ms){
+  var el=document.getElementById(id);if(!el)return;
+  var sl=el.querySelectorAll('.carousel-slide'),co=document.getElementById(cid),db=document.getElementById(did),n=sl.length,c=0,tm=null;
+  if(n<=20){for(var i=0;i<n;i++){(function(x){var d=document.createElement('button');d.className='carousel-dot'+(x===0?' active':'');d.addEventListener('click',function(){go(x);});db.appendChild(d);})(i);}}
+  else{db.style.padding='10px 24px';db.style.gap='0';var tr=document.createElement('div');tr.style.cssText='width:100%;height:4px;background:rgba(255,255,255,.15);border-radius:2px;cursor:pointer';var fi=document.createElement('div');fi.style.cssText='height:100%;background:#FFDF00;border-radius:2px;transition:width .35s;width:'+(100/n)+'%';fi.id=id+'_pf';tr.appendChild(fi);tr.addEventListener('click',function(e){var r=tr.getBoundingClientRect();go(Math.floor(((e.clientX-r.left)/r.width)*n));});db.appendChild(tr);}
+  function go(v){sl[c].classList.remove('active');if(db.children.length===n)db.children[c].classList.remove('active');c=((v%n)+n)%n;sl[c].classList.add('active');if(db.children.length===n)db.children[c].classList.add('active');co.textContent=(c+1)+' / '+n;var pf=document.getElementById(id+'_pf');if(pf)pf.style.width=(((c+1)/n)*100)+'%';clearInterval(tm);if(ms)tm=setInterval(function(){go(c+1);},ms);}
+  clearInterval(tm);if(ms)tm=setInterval(function(){go(c+1);},ms);
+  carousels[id]={go:go,c:function(){return c;}};
+}
+initC('regionCarousel','regionCounter','regionDots',5000);
+initC('missionCarousel','missionCounter','missionDots',4000);
+window.navCarousel=function(name,dir){var id=name==='region'?'regionCarousel':'missionCarousel';if(carousels[id])carousels[id].go(carousels[id].c()+dir);};
+document.addEventListener('keydown',function(e){if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight')return;var dir=e.key==='ArrowLeft'?-1:1,mid=window.innerHeight/2,best=null,bd=Infinity;['regionCarousel','missionCarousel'].forEach(function(id){var el=document.getElementById(id);if(!el)return;var r=el.getBoundingClientRect(),d=Math.abs((r.top+r.bottom)/2-mid);if(d<bd){bd=d;best=id;}});if(best&&carousels[best])carousels[best].go(carousels[best].c()+dir);});
+</script>
+
+
+</body>
+</html>
