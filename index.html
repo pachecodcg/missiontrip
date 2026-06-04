@@ -216,6 +216,38 @@ body{font-family:'Source Sans 3',sans-serif;background:var(--page-bg);color:var(
   .photo-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
   .bar-label{width:90px;font-size:10px}
 }
+/* ═══════ TAB BAR ═══════ */
+.tab-bar{position:sticky;top:0;z-index:90;background:var(--primary-dark);display:flex;justify-content:center;gap:0;border-bottom:3px solid var(--primary);box-shadow:0 2px 12px rgba(0,0,0,.2)}
+.tab-btn{font-family:Montserrat;font-weight:700;font-size:11px;letter-spacing:1px;text-transform:uppercase;border:none;padding:16px 32px;cursor:pointer;color:rgba(255,255,255,.45);background:transparent;transition:all .2s;position:relative}
+.tab-btn:hover{color:rgba(255,255,255,.7);background:rgba(255,255,255,.04)}
+.tab-btn.active{color:#fff}
+.tab-btn.active::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:3px}
+.tab-btn[data-tab="report"].active::after{background:var(--green)}
+.tab-btn[data-tab="committee"].active::after{background:var(--usa-red)}
+.tab-btn .tab-icon{margin-right:6px;font-size:13px}
+@media(max-width:640px){.tab-btn{padding:12px 18px;font-size:10px;letter-spacing:.6px}}
+
+/* ═══════ COMMITTEE CHECKLIST ═══════ */
+.cl-table{border-radius:10px;overflow:hidden;box-shadow:0 1px 5px rgba(0,40,104,.07);background:#fff}
+.cl-header{display:flex;background:var(--primary);padding:12px 16px;gap:8px;align-items:center}
+.cl-header span{font-family:Montserrat;font-weight:700;font-size:8.5px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.85)}
+.cl-h-check{width:28px;flex-shrink:0}.cl-h-org{flex:2;min-width:140px}.cl-h-ask{flex:3;min-width:160px}.cl-h-range{flex:1.2;min-width:100px}.cl-h-how{flex:2.5;min-width:140px}.cl-h-who{flex:1;min-width:80px}
+.cl-row{display:flex;padding:14px 16px;gap:8px;align-items:flex-start;border-bottom:1px solid var(--silver-bg);cursor:pointer;transition:background .15s}
+.cl-row:hover{background:var(--silver-bg)}
+.cl-row input[type="checkbox"]{display:none}
+.cl-check{width:22px;height:22px;border:2px solid var(--silver-light);border-radius:5px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s;margin-top:1px}
+.cl-row input:checked ~ .cl-check{background:var(--green);border-color:var(--green)}
+.cl-row input:checked ~ .cl-check::after{content:'\2713';color:#fff;font-size:13px;font-weight:700}
+.cl-row input:checked ~ .cl-org,.cl-row input:checked ~ .cl-ask{text-decoration:line-through;opacity:.5}
+.cl-org{flex:2;min-width:140px;font-family:Montserrat;font-weight:700;font-size:12px;color:var(--primary)}
+.cl-ask{flex:3;min-width:160px;font-family:'Source Sans 3';font-weight:400;font-size:12.5px;color:var(--text-body);line-height:1.45}
+.cl-range{flex:1.2;min-width:100px;font-family:Montserrat;font-weight:700;font-size:12px;color:var(--green-dark)}
+.cl-how{flex:2.5;min-width:140px;font-family:'Source Sans 3';font-weight:400;font-size:12px;color:var(--silver);line-height:1.45}
+.cl-who{flex:1;min-width:80px;font-family:'Source Sans 3';font-weight:500;font-size:12px;color:var(--primary);border-bottom:1px dashed var(--silver-light);min-height:20px;outline:none;padding:2px 4px;border-radius:3px;transition:background .2s}
+.cl-who:focus{background:var(--yellow-pale);border-bottom-color:var(--yellow-dark)}
+.cl-who:empty::before{content:'assign...';color:var(--silver-light);font-style:italic}
+@media(max-width:900px){.cl-header,.cl-row{flex-wrap:wrap}.cl-h-how,.cl-how,.cl-h-who,.cl-who{display:none}.cl-h-org,.cl-org{flex:1.5}.cl-h-ask,.cl-ask{flex:2}.cl-h-range,.cl-range{flex:1}}
+
 /* ═══════ LANGUAGE TOGGLE ═══════ */
 .lang-toggle{position:fixed;top:16px;right:16px;z-index:999;display:flex;background:rgba(0,40,104,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:8px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.1)}
 .lang-btn{font-family:Montserrat;font-weight:700;font-size:11px;letter-spacing:.8px;border:none;padding:10px 16px;cursor:pointer;display:flex;align-items:center;gap:6px;transition:background .2s,color .2s;background:transparent;color:rgba(255,255,255,.5)}
@@ -285,6 +317,14 @@ body{font-family:'Source Sans 3',sans-serif;background:var(--page-bg);color:var(
   <div class="hero-stripe"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>
 </section>
 
+
+<!-- TAB NAVIGATION -->
+<nav class="tab-bar" id="tabBar">
+  <button class="tab-btn active" data-tab="report" onclick="switchTab('report')"><span class="tab-icon">📋</span>Mission Report</button>
+  <button class="tab-btn" data-tab="committee" onclick="switchTab('committee')"><span class="tab-icon">📝</span>U.S. Committee</button>
+</nav>
+
+<div id="tabReport">
 <!-- ═══════════════ MISSION OVERVIEW ═══════════════ -->
 <section class="section">
   <div class="container">
@@ -566,8 +606,8 @@ body{font-family:'Source Sans 3',sans-serif;background:var(--page-bg);color:var(
         <div class="pcard-desc">One of the largest dental meetings in the US, based in Atlanta &mdash; supporting dental education and community service</div>
       </div>
       <div class="pcard" style="border-top-color:var(--red)">
-        <div class="pcard-icon" style="background:var(--red)">3M</div>
-        <div class="pcard-name">3M Oral Care</div>
+        <div class="pcard-icon" style="background:var(--red)">S</div>
+        <div class="pcard-name">Solventum (formerly 3M Oral Care)</div>
         <div class="pcard-desc">Returning sponsor &mdash; provided dental materials and consumables for the 2022 mission; seeking continued partnership</div>
       </div>
       <div class="pcard" style="border-top-color:var(--primary)">
@@ -970,10 +1010,135 @@ body{font-family:'Source Sans 3',sans-serif;background:var(--page-bg);color:var(
       <div style="font-family:Montserrat;font-weight:700;font-size:24px;letter-spacing:-.3px;margin-bottom:8px">🇺🇸 Augusta &harr; Quixad&aacute; 🇧🇷</div>
       <div style="font-family:'Source Sans 3';font-weight:300;font-size:15px;color:rgba(255,255,255,.65)">Augusta University &middot; Dental College of Georgia</div>
       <div style="font-family:'Source Sans 3';font-weight:300;font-size:14px;color:rgba(255,255,255,.65)">Centro Universit&aacute;rio Cat&oacute;lica de Quixad&aacute;</div>
-      <div style="font-family:'Source Sans 3';font-weight:300;font-size:12px;color:rgba(255,255,255,.4);margin-top:8px">Pierre Fauchard Academy &middot; GDA &middot; Hinman &middot; 3M &middot; Ivoclar &middot; NOMAD</div>
+      <div style="font-family:'Source Sans 3';font-weight:300;font-size:12px;color:rgba(255,255,255,.4);margin-top:8px">Pierre Fauchard Academy &middot; GDA &middot; Hinman &middot; Solventum &middot; Ivoclar &middot; NOMAD</div>
     </div>
   </div>
 </section>
+
+
+</div><!-- end tabReport -->
+
+<div id="tabCommittee" style="display:none">
+<!-- ═══════════════ U.S. COMMITTEE — ACTION PLAN ═══════════════ -->
+<div style="background:linear-gradient(135deg,var(--usa-red) 0%,#8b0620 100%);padding:40px 30px;text-align:center;position:relative;overflow:hidden">
+  <div style="position:absolute;bottom:0;left:0;right:0;height:4px;display:flex"><span style="flex:1;background:var(--primary)"></span><span style="flex:1;background:#fff"></span><span style="flex:1;background:var(--usa-red)"></span></div>
+  <div style="font-family:Montserrat;font-weight:700;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.7);margin-bottom:10px">Internal Planning Document</div>
+  <h2 style="font-family:Montserrat;font-weight:700;font-size:24px;color:#fff;letter-spacing:-.3px;margin-bottom:6px">🇺🇸 U.S. Committee &mdash; Action Plan</h2>
+  <p style="font-family:'Source Sans 3';font-weight:300;font-size:15px;color:rgba(255,255,255,.7);max-width:600px;margin:0 auto">Outreach checklist for students and faculty. Check items off as they&rsquo;re completed. Organized by priority and donation type.</p>
+</div>
+
+<section class="section" style="padding-bottom:20px">
+  <div class="container">
+    <div class="kicker">Tier 1 &mdash; Financial Support</div>
+    <div class="prose" style="margin-bottom:20px">
+      <h2>Student Travel Scholarships &amp; Grants</h2>
+      <p>Cash donations and grants that directly offset student airfare and travel expenses. These are the highest-impact asks &mdash; every dollar here lowers the barrier for a student to participate.</p>
+    </div>
+    <div class="cl-table">
+      <div class="cl-header"><span class="cl-h-check"></span><span class="cl-h-org">Organization</span><span class="cl-h-ask">What to Ask</span><span class="cl-h-range">Est. Range</span><span class="cl-h-how">How to Reach</span><span class="cl-h-who">Assigned To</span></div>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Pierre Fauchard Academy Foundation</span><span class="cl-ask">Humanitarian project grant application</span><span class="cl-range">$2,000&ndash;$10,000</span><span class="cl-how">Local PFA section chair &rarr; Foundation application</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Alpha Omega Int&rsquo;l Dental Society</span><span class="cl-ask">Renewed sponsorship (supported 2022 trip)</span><span class="cl-range">$2,000&ndash;$5,000</span><span class="cl-how">Direct contact &mdash; warm relationship from 2022</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">ADA Foundation</span><span class="cl-ask">Charitable dental program grant</span><span class="cl-range">$1,000&ndash;$5,000</span><span class="cl-how">Online application at ada.org/foundation</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Hinman Dental Society</span><span class="cl-ask">Educational/charitable grant + vendor access</span><span class="cl-range">$2,000&ndash;$10,000</span><span class="cl-how">Foundation application + poster at Hinman Meeting (Atlanta)</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Georgia Dental Association (GDA)</span><span class="cl-ask">Community service sponsorship</span><span class="cl-range">$1,000&ndash;$5,000</span><span class="cl-how">GDA contact, present at district meeting</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">CMDA &mdash; Global Health Outreach</span><span class="cl-ask">Mission trip support &amp; guidance</span><span class="cl-range">$1,000&ndash;$5,000</span><span class="cl-how">cmda.org &rarr; Global Health Outreach program</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Rotary Club of Augusta</span><span class="cl-ask">Rotary Global Grant (requires Brazil Rotary club partner)</span><span class="cl-range">$5,000&ndash;$30,000+</span><span class="cl-how">Local Augusta Rotary club &rarr; district grant coordinator</span><span class="cl-who" contenteditable="true"></span></label>
+
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Crowdfunding (GoFundMe / DonorBox)</span><span class="cl-ask">Public campaign with 2022 data + photos</span><span class="cl-range">$2,000&ndash;$10,000+</span><span class="cl-how">Set up page, share via social media &amp; alumni networks</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Delta Air Lines &mdash; Community Giving</span><span class="cl-ask">Group airfare discount or donated seats</span><span class="cl-range">$2,000&ndash;$8,000</span><span class="cl-how">Formal request via delta.com community/charitable travel</span><span class="cl-who" contenteditable="true"></span></label>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;padding-bottom:20px">
+  <div class="container">
+    <div class="kicker">Tier 2 &mdash; Material Donations</div>
+    <div class="prose" style="margin-bottom:20px">
+      <h2>Consumable Clinical Supplies</h2>
+      <p>Materials that get used up treating patients. <strong>Many of these companies also offer financial sponsorship</strong> for humanitarian missions &mdash; don&rsquo;t hesitate to ask &mdash; composites, glass ionomers, sealants, fluoride, local anesthetic, hand instruments, and oral hygiene kits for distribution. These are the lifeblood of the clinical operation.</p>
+    </div>
+    <div class="cl-table">
+      <div class="cl-header"><span class="cl-h-check"></span><span class="cl-h-org">Company</span><span class="cl-h-ask">Products to Request</span><span class="cl-h-range">Est. Value</span><span class="cl-h-how">How to Reach</span><span class="cl-h-who">Assigned To</span></div>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Solventum (formerly 3M Oral Care)</span><span class="cl-ask">Filtek composites, Scotchbond, Ketac GI, Clinpro sealants &amp; fluoride varnish</span><span class="cl-range">$3,000&ndash;$8,000</span><span class="cl-how">Returning sponsor &mdash; direct rep contact, corporate giving dept</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Ivoclar</span><span class="cl-ask">Tetric composites, Adhese adhesives, Variolink cements</span><span class="cl-range">$2,000&ndash;$5,000</span><span class="cl-how">Corporate social responsibility program</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">GC America</span><span class="cl-ask">Fuji IX &amp; Fuji II LC glass ionomers, MI Paste (critical for ART)</span><span class="cl-range">$2,000&ndash;$5,000</span><span class="cl-how">Corporate giving &mdash; GC has strong outreach track record</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Ultradent</span><span class="cl-ask">UltraSeal XT sealants, etch, bonding, VALO curing lights, composite &mdash; VERY likely to support</span><span class="cl-range">$2,000&ndash;$5,000+</span><span class="cl-how">Strong outreach track record &mdash; also ask about financial sponsorship</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Hu-Friedy / Integra LifeSciences</span><span class="cl-ask">Scalers, curettes, mirrors, explorers, extraction forceps &amp; elevators</span><span class="cl-range">$2,000&ndash;$5,000</span><span class="cl-how">&ldquo;Smiles for Life&rdquo; charitable program</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Henry Schein Cares</span><span class="cl-ask">Mixed dental supplies, materials, infection control</span><span class="cl-range">$2,000&ndash;$10,000</span><span class="cl-how">Formal application at henryschein.com/cares</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Colgate</span><span class="cl-ask">500+ toothbrush &amp; toothpaste kits for patient distribution</span><span class="cl-range">$1,000&ndash;$2,000</span><span class="cl-how">Online product donation request form</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Oral-B / Procter &amp; Gamble</span><span class="cl-ask">500+ toothbrush &amp; floss kits for patient distribution</span><span class="cl-range">$1,000&ndash;$2,000</span><span class="cl-how">P&amp;G community giving program</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Brasseler USA</span><span class="cl-ask">Burs, rotary instruments, finishing &amp; polishing</span><span class="cl-range">$500&ndash;$1,500</span><span class="cl-how">Corporate giving / rep contact</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Crosstex / SPS Medical</span><span class="cl-ask">Gloves, masks, barriers, sterilization pouches, surface disinfectant</span><span class="cl-range">$500&ndash;$2,000</span><span class="cl-how">Infection control product donation request</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Septodont</span><span class="cl-ask">Local anesthetic (Septocaine/Articaine), needles, syringes</span><span class="cl-range">$500&ndash;$1,500</span><span class="cl-how">Corporate giving / university rep</span><span class="cl-who" contenteditable="true"></span></label>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;padding-bottom:20px">
+  <div class="container">
+    <div class="kicker">Tier 3 &mdash; Equipment</div>
+    <div class="prose" style="margin-bottom:20px">
+      <h2>Portable Equipment &mdash; Loaners &amp; Donations</h2>
+      <p>High-value portable equipment that travels with the team and returns after the mission (loaners) or is donated outright. These are the items that make field dentistry possible &mdash; from carry-on dental units to portable X-ray and battery-powered curing lights.</p>
+    </div>
+    <div class="cl-table">
+      <div class="cl-header"><span class="cl-h-check"></span><span class="cl-h-org">Equipment / Company</span><span class="cl-h-ask">Specific Product</span><span class="cl-h-range">Value / Ask</span><span class="cl-h-how">How to Reach</span><span class="cl-h-who">Assigned To</span></div>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">NOMAD Pro 2 &mdash; KaVo Kerr / Envista</span><span class="cl-ask">Portable handheld X-ray unit (loaner &mdash; 2022 precedent)</span><span class="cl-range">$8K&ndash;$10K value / Loaner</span><span class="cl-how">Direct contact &mdash; loaned in 2022. Reference published data.</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Aseptico (ADU-03 Portable Unit)</span><span class="cl-ask">Self-contained portable dental unit &mdash; carry-on size, battery/AC</span><span class="cl-range">$3K&ndash;$6K ea / Loaner</span><span class="cl-how">aseptico.com &mdash; designed for field/mission dentistry</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">DNTLworks (ProStar / PortaVac)</span><span class="cl-ask">Portable dental unit with suction, air/water, handpiece connections</span><span class="cl-range">$2K&ndash;$5K ea / Loaner</span><span class="cl-how">dntlworks.com &mdash; portable dental equipment specialists</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Dentsply Sirona &mdash; Cavitron</span><span class="cl-ask">Cavitron Touch or Plus ultrasonic scaler (portable setup)</span><span class="cl-range">$1.5K&ndash;$3K / Loaner</span><span class="cl-how">Dentsply rep &mdash; perio was 36.6% of 2022 procedures</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Parkell &mdash; TurboSensor</span><span class="cl-ask">Battery-operated portable ultrasonic scaler</span><span class="cl-range">$800&ndash;$1,500 / Loaner</span><span class="cl-how">parkell.com &mdash; portable ultrasonic alternative</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Ultradent &mdash; VALO Curing Light</span><span class="cl-ask">Battery-operated LED curing lights (2&ndash;3 units)</span><span class="cl-range">$300&ndash;$600 ea / Donation</span><span class="cl-how">Ultradent outreach program</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">Ivoclar &mdash; Bluephase</span><span class="cl-ask">Battery-operated LED curing lights (alternative)</span><span class="cl-range">$300&ndash;$600 ea / Donation</span><span class="cl-how">Ivoclar corporate giving</span><span class="cl-who" contenteditable="true"></span></label>
+      <label class="cl-row"><input type="checkbox"><span class="cl-check"></span><span class="cl-org">NSK or KaVo &mdash; Handpieces</span><span class="cl-ask">Portable high-speed and slow-speed handpieces</span><span class="cl-range">$500&ndash;$2,000 / Loaner</span><span class="cl-how">NSK or KaVo university rep</span><span class="cl-who" contenteditable="true"></span></label>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="kicker">Outreach Playbook</div>
+    <div class="prose" style="margin-bottom:20px">
+      <h2>How to Approach Sponsors</h2>
+    </div>
+    <div class="two-col">
+      <div class="info-box green" style="margin:0">
+        <div class="info-box-t">Warm Contacts &mdash; Start Here</div>
+        <p>Alpha Omega, Solventum (formerly 3M), and KaVo Kerr/NOMAD already supported the 2022 trip. Lead with: <strong>&ldquo;You supported our 2022 mission which treated 474 patients. Here are the published results. We&rsquo;re doing it again in 2027 and would love your continued partnership.&rdquo;</strong> Attach this report as evidence. These are the easiest asks.</p>
+      </div>
+      <div class="info-box" style="margin:0">
+        <div class="info-box-t">Institutional Grants &mdash; Formal Applications</div>
+        <p>PFA Foundation, ADA Foundation, Hinman, GDA, and Rotary all have formal grant/application processes. <strong>Start these early</strong> &mdash; some have quarterly deadlines. The published 2022 data (peer-reviewed, SPSS-verified) is your strongest asset. Emphasize measurable outcomes: 474 patients, 2,396 procedures, 5.1 procedures per patient.</p>
+      </div>
+    </div>
+    <div class="two-col" style="margin-top:18px">
+      <div class="info-box yellow" style="margin:0">
+        <div class="info-box-t">Corporate Material Donations</div>
+        <p>For Solventum, Ivoclar, GC America, Ultradent, and other manufacturers: <strong>the pitch is visibility.</strong> &ldquo;Your products will be used to treat hundreds of underserved patients, featured in photos, and credited in an academic publication.&rdquo; Most have CSR or charitable giving departments. Ask your university rep for an introduction to the corporate giving team.</p>
+      </div>
+      <div class="info-box red" style="margin:0">
+        <div class="info-box-t">Equipment Loaners &mdash; The Key Ask</div>
+        <p>Portable units, Cavitrons, NOMAD, and curing lights are the <strong>highest-value items</strong> but also the most impactful. Frame loaners as <strong>zero-risk for the company</strong> &mdash; equipment returns after the trip, and they get published exposure. The NOMAD loaner in 2022 enabled 447 diagnostic X-rays. That&rsquo;s a compelling number.</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:24px;animation-delay:.1s;border-top-color:var(--yellow)">
+      <div class="card-header" style="background:var(--yellow-dark)">
+        <h3 style="color:var(--primary-dark)">Quick Reference &mdash; Total Potential Support</h3>
+        <span class="badge" style="background:var(--primary);color:var(--yellow)">Estimated</span>
+      </div>
+      <div class="card-body">
+        <div class="budget-row"><div><div class="budget-item">Tier 1 &mdash; Financial Support (all sources)</div></div><div class="budget-cost">$17,000&ndash;$83,000+</div></div>
+        <div class="budget-row"><div><div class="budget-item">Tier 2 &mdash; Material Donations (all companies)</div></div><div class="budget-cost">$13,500&ndash;$43,000</div></div>
+        <div class="budget-row"><div><div class="budget-item">Tier 3 &mdash; Equipment Loaners (total value)</div></div><div class="budget-cost">$15,000&ndash;$30,000</div></div>
+        <div class="budget-total"><div class="budget-item">Total Potential Mission Support</div><div class="budget-cost">$45K&ndash;$156K+</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</div><!-- end tabCommittee -->
 
 <!-- ═══════════════ FOOTER ═══════════════ -->
 <footer class="report-footer">
@@ -1074,6 +1239,13 @@ var T={
 {pt:'Destino mundialmente famoso (\u201cJeri\u201d) no litoral oeste do Cear\u00e1. Parque nacional com dunas e lagoas cristalinas que atraem visitantes do mundo inteiro.'},
 {pt:'Conhecida como a \u201cTerra dos Monolitos\u201d. Apesar da beleza natural, a pobreza persiste no interior. Os 28 milh\u00f5es de habitantes do Sert\u00e3o enfrentam inseguran\u00e7a h\u00eddrica cr\u00f4nica.'}
 ],
+
+'.tab-btn':[{pt:'Relat\u00f3rio da Miss\u00e3o'},{pt:'Comit\u00ea EUA'}],
+'.cl-h-org':[{pt:'Organiza\u00e7\u00e3o'},{pt:'Empresa'},{pt:'Equipamento / Empresa'}],
+'.cl-h-ask':[{pt:'O Que Pedir'},{pt:'Produtos a Solicitar'},{pt:'Produto Espec\u00edfico'}],
+'.cl-h-range':[{pt:'Faixa Est.'},{pt:'Valor Est.'},{pt:'Valor / Tipo'}],
+'.cl-h-how':[{pt:'Como Contatar'},{pt:'Como Contatar'},{pt:'Como Contatar'}],
+'.cl-h-who':[{pt:'Respons\u00e1vel'},{pt:'Respons\u00e1vel'},{pt:'Respons\u00e1vel'}],
 '.report-footer .fb':[{pt:'Viagem Mission\u00e1ria ao Brasil 2027 \u2014 Proposta e Relat\u00f3rio de Impacto'}]
 };
 
@@ -1085,6 +1257,15 @@ function setLang(lang){
       el.innerHTML=lang==='pt'?items[i].pt:el.getAttribute('data-en');
   }}
   document.documentElement.lang=lang;
+}
+
+
+/* ═══════ TAB TOGGLE ═══════ */
+function switchTab(tab){
+  document.getElementById('tabReport').style.display=tab==='report'?'block':'none';
+  document.getElementById('tabCommittee').style.display=tab==='committee'?'block':'none';
+  document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.toggle('active',b.dataset.tab===tab);});
+  window.scrollTo({top:0,behavior:'smooth'});
 }
 
 /* ═══════ CAROUSEL ENGINE ═══════ */
